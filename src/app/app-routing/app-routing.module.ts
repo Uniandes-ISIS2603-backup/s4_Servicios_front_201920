@@ -40,10 +40,10 @@ const routes: Routes = [
       path: 'home',
       component: AuthLoginComponent
     },
-    {
-      path: '**',
-      redirectTo: 'home',
-    },
+  //  {
+   //   path: '**',
+    //  redirectTo: 'home',
+  //  },
     {
     path: 'solicitudes',
     children: [{
