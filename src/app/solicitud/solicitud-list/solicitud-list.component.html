@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="col-md-2">
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Solicitud Descripcion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let s of solicitudes">
+                      <td style="cursor: pointer;">
+                        <a class="figure-caption" [routerLink] ="['/solicitudes', { outlets: { 'detail': [s.id] }}]" >{{s.descripcion}}</a>
+                      </td>
+                                  
+          </tr>
+        </tbody>
+      </table>
+    </div>
