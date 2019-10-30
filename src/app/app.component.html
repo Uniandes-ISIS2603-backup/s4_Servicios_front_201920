@@ -1,9 +1,12 @@
-<ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link active" routerLink="solicitudes/list" routerLinkActive="active">Solicitudes</a>
-    </li>
-  </ul>
-  <div class="container-fluid">
+<h1>Solicitudes</h1>
+<br/>
+<h3>Haga click en el botón para revisar las solicitudes hechas hasta la fecha :)</h3>
+<br/>
+<div style="width: 750px; margin: 0 auto;">
+  <button class="btn btn-outline-success btn-block nav-link active" routerLink="solicitudes/list" routerLinkActive="active" >Solicitudes</button>
+</div>
+<br/>
+      <div class="container-fluid">
     <div class="border m-5 row">
       <div class="col">
         <router-outlet></router-outlet>
