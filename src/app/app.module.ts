@@ -1,17 +1,18 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import {HttpErrorInterceptor} from './interceptors/httperrorinterceptor.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ModalDialogModule } from 'ngx-modal-dialog';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ToastrModule} from 'ngx-toastr';
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {HttpErrorInterceptor} from './interceptors/httperrorinterceptor.service';
 import {NgxPermissionsModule} from 'ngx-permissions';
-import { ModalDialogModule } from 'ngx-modal-dialog';
 
-import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
+import {ServicioOfrecidoModule} from './servicio-ofrecido/servicio-ofrecido.module';
+import {AppComponent} from './app.component';
 import {AuthModule} from './auth/auth.module';
 
 
@@ -19,18 +20,18 @@ import {AuthModule} from './auth/auth.module';
 
 
 
+
 @NgModule({
-    declarations: [
-        AppComponent
-    ],
     imports: [
-        BrowserModule,
-        AppRoutingModule,
         HttpClientModule,
+        BrowserModule,
+        FormsModule,
+        AppRoutingModule,
+        ServicioOfrecidoModule,
         BrowserAnimationsModule,
         ModalDialogModule.forRoot(),
         AuthModule,
-        FormsModule,
+        
         ToastrModule.forRoot({
             timeOut: 10000,
             positionClass: 'toast-bottom-right',
@@ -39,6 +40,9 @@ import {AuthModule} from './auth/auth.module';
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
         NgbModule
+    ],
+    declarations: [
+        AppComponent
     ],
     bootstrap: [AppComponent],
     providers: [

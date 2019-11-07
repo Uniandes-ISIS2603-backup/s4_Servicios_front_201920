@@ -1,0 +1,19 @@
+
+    <div class="container-fluid">
+      <div class="col-md-2">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>Servicio Ofrecido Name</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor = "let e of servicios">
+                <td style="cursor: pointer;">
+                            <a class="figure-caption" [routerLink] ="['/serviciosOfrecidos', { outlets: { 'detail': [e.id] } }]" >{{e.nombre}}</a>
+                        </td>     
+            </tr>
+          </tbody>
+         
+        </table>
+      </div>
