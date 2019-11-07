@@ -1,0 +1,6 @@
+{ "id":3,
+  "nombre": "Limpieza general",
+  "descripcion": "Se relaiza un limepieza  y organiación completa y a fondo del hogar.",
+  "precio": 73.2,
+  "tipo": "Aseo"
+}
