@@ -12,11 +12,14 @@ import { Solicitud } from '../solicitud';
   styleUrls: ['./solicitud-detail.component.css']
 })
 export class SolicitudDetailComponent implements OnInit {
-
+ 
+  
   constructor(
     private solicitudService: SolicitudService,
     private route: ActivatedRoute
   ) { }
+
+  
 
 solicitudDetail: SolicitudDetail; 
 
@@ -47,4 +50,6 @@ onLoad(params) {
     this.loader.unsubscribe();
   }
 
+ 
+  
 }

@@ -8,6 +8,7 @@ import { SolicitudService } from '../solicitud.service';
 @Component({
     selector: 'list-solicitud',
     templateUrl: './solicitud-list.component.html', 
+    styleUrls: ['./solicitud-list.component.css']
 })
 export class SolicitudListComponent implements OnInit {
 

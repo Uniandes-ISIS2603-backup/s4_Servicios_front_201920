@@ -9,6 +9,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ToastrModule} from 'ngx-toastr';
 import {NgxPermissionsModule} from 'ngx-permissions';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { SolicitudModule } from './solicitud/solicitud.module';
@@ -21,8 +22,9 @@ import { AuthModule } from './auth/auth.module';
      HttpClientModule,
      BrowserModule,
      FormsModule, 
+     ReactiveFormsModule,
      AppRoutingModule, 
-     SolicitudModule, 
+     SolicitudModule,
      BrowserAnimationsModule, 
      ModalDialogModule.forRoot(),
      AuthModule,

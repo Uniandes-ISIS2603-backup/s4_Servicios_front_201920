@@ -1,8 +1,19 @@
-<div class="col-md-12">
-    <div class="container-fluid">
-      <p class="h3 p-3">Solicitud: {{solicitudDetail.descripcion}}</p>
-      <p class="p-3"> Estado: {{solicitudDetail.estado}}</p>
-       <p class="p-3">Fecha de inicio: {{solicitudDetail.fechaInicio}}</p>      
-        <img src={{solicitudDetail.foto}} class="img-fluid rounded mx-auto d-block" alt="Responsive image">
+    <div class="row container-fluid">
+      <div class="col-md-6">
+        <p class="h3 p-3">Solicitud: {{solicitudDetail.descripcion}}</p>
+        <p class="p-3"> Estado: {{solicitudDetail.estado}}</p>
+        <p class="p-3">Fecha de inicio: {{solicitudDetail.fechaInicio}}</p>      
+          <img src={{solicitudDetail.foto}} class="img-fluid rounded mx-auto d-block" alt="Responsive image">
+          <br/>
+      </div>
+      <div class="col-md-6">
+      <br/>
+          <h3>Calificacion:</h3>
+    <br/>
+          <p class="p-2"> Comentario: {{solicitudDetail.calificacion.comentario}}</p>
+  <br/>
+          <p class="p-2"> Puntuacion: {{solicitudDetail.calificacion.puntuacion}}</p>
+
     </div>
   </div>
+  

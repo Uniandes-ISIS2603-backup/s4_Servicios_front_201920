@@ -3,12 +3,12 @@
       <table class="table table-striped ">
         <thead class="thead-dark">
           <tr>
-            <th>Solicitud Descripcion</th>
+            <th style="text-align:center">Solicitud Descripcion</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor = "let s of solicitudes">
-                      <td style="cursor: pointer;">
+                      <td style="cursor: pointer; text-align:center">
                         <a class="figure-caption" [routerLink] ="['/solicitudes', { outlets: { 'detail': [s.id] }}]" >{{s.descripcion}}</a>
                       </td>
                                   
@@ -16,3 +16,4 @@
         </tbody>
       </table>
     </div>
+</div>
