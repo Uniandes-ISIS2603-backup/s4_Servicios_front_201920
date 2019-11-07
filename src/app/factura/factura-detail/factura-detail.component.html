@@ -1,0 +1,23 @@
+<div class="alert alert-info" role="alert">
+  <a class="alert-link">Detalles de la factura con # id: {{facturaDetail.id}}</a>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col"># Id</th>
+      <th scope="col">Duracion</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">¿Pagada?</th>
+      <th scope="col">¿Primer pago?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class = "table-info">
+      <td>{{facturaDetail.id}}</td>
+      <td>{{facturaDetail.duracion}}</td>
+      <td>{{facturaDetail.fecha}}</td>
+      <td>{{facturaDetail.pagada}}</td>
+      <td>{{facturaDetail.primerPago}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -5,9 +5,22 @@ import {NgxPermissionsGuard} from 'ngx-permissions';
 
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
+import { FacturaListComponent } from '../factura/factura-list/factura-list.component';
+import { FacturaDetailComponent } from '../factura/factura-detail/factura-detail.component';
 
 const routes: Routes = [
-
+    {
+        path: 'facturas',
+        children:[{
+          path: 'list',
+          component: FacturaListComponent
+        },
+        {
+          path: ':id',
+          component: FacturaDetailComponent
+        }
+        ]
+      },
      {
         path: 'auth',
         children: [

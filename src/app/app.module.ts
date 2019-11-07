@@ -13,6 +13,9 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
+import {  ReactiveFormsModule } from "@angular/forms";
+import { HeaderComponent } from './header/header.component';
+import { FacturaModule } from './factura/factura.module';
 
 
 
@@ -21,7 +24,7 @@ import {AuthModule} from './auth/auth.module';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent, HeaderComponent
     ],
     imports: [
         BrowserModule,
@@ -38,7 +41,9 @@ import {AuthModule} from './auth/auth.module';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule
+        NgbModule,
+        ReactiveFormsModule,
+        FacturaModule
     ],
     bootstrap: [AppComponent],
     providers: [

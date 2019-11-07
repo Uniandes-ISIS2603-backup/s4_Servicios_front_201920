@@ -1,0 +1,14 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col"># Id</th>
+      <th scope="col">Duracion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let f of facturas">
+      <button type="button" class="btn btn-light" routerLink="/facturas/{{f.id}}">{{f.id}}</button>
+      <td>{{f.duracion}}</td>
+    </tr>
+  </tbody>
+</table>
