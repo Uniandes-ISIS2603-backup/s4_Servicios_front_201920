@@ -1,0 +1,13 @@
+{
+    "id" : 3,
+    "nombre" : "Alvaro Cala",
+    "telefono" : 3138893,
+    "mail" : "a.cala@bu.com",
+    "usuario" : "a.cala",
+    "contrasena" : "contrasena",
+    "direccion" : "Calle falsa 3",
+    "servicios" : [
+    "tercerservicio"
+  ],
+  "tarjeta" : "123487656"
+  }

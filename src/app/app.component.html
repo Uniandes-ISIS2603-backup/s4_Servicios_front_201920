@@ -1,1 +1,15 @@
-<h1>Hola mundo</h1>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<ul class = "nav">
+  <li class = "nav-item">
+    <a class = "nav-link active" routerLink = "clientes/list" routerLinkActive = "active" >Cliente</a>
+  </li>
+</ul>
+<div class = "container-fluid">
+  <div class = "border m-5 row">
+    <div class = "col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

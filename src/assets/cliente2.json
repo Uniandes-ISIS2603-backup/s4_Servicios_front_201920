@@ -1,0 +1,13 @@
+{
+    "id" : 2,
+    "nombre" : "Natalia Cala",
+    "telefono" : 3138892,
+    "mail" : "n.cala@gmail.com",
+    "usuario" : "n.cala",
+    "contrasena" : "contrasena",
+    "direccion" : "Calle falsa 2",
+    "servicios" : [
+    "primerservicio", "segundoservicio"
+  ],
+  "tarjeta" : "12346789"
+  }

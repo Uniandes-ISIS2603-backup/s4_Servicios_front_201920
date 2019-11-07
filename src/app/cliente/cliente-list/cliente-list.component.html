@@ -1,0 +1,21 @@
+<div class = "container-fluid">
+  <h1 class = "text-center"> Lista de Clientes </h1>
+  <div class = "table-responsive"> 
+  <table class = "table table-dark">
+    <thead class = "thead-dark">
+      <tr>
+        <th> Nombre </th>
+        <th> Usuario </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let cliente of clientes">
+        <td style = "cursor : pointer;">
+          <a class = "figure-caption" routerLink = "/clientes/{{cliente.id}}"> {{cliente.nombre}}</a>
+        </td>
+        <td>{{cliente.usuario}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>

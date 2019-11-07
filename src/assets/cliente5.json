@@ -1,0 +1,13 @@
+{
+    "id" : 5,
+    "nombre" : "Isabel Cuellar",
+    "telefono" : 3138895,
+    "mail" : "icuellar@cesa.com",
+    "usuario" : "i.cuellar",
+    "contrasena" : "contrasena",
+    "direccion" : "Calle falsa 5",
+    "servicios" : [
+    "primerservicio", "segundoservicio", "tercerservicio", "unservicio"
+  ],
+  "tarjeta" : "123456456"
+  }
