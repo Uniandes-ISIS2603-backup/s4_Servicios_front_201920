@@ -1,6 +1,6 @@
 {
   "id":2,
   "nombre": "Remodelar Cocina",
-  "description": "Se instala una nueva cocina de acuerdo con las especificaciones dadas.",
+  "descripcion": "Se instala una nueva cocina de acuerdo con las especificaciones dadas.",
   "precio": 423.2,
   "tipo": "Pintura" }
