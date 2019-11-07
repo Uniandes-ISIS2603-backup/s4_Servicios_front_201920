@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Batman",
+    "image": "https://www.dccomics.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_Batman_20190116_5c3fc4b40faec2.47318964.jpg?itok=3RkYenfT",
+    "power": 5,
+    "wisdom": 10
+  },
+  {
+    "id": 2,
+    "name": "Superman",
+    "image": "https://www.dccomics.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_Superman_20190116_5c3fc2758f6a12.25513240.jpg?itok=v4JG6s6J",
+    "power": 10,
+    "wisdom": 5
+  },
+  {
+    "id": 3,
+    "name": "Wonder Woman",
+    "image": "https://www.dccomics.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_WonderWoman_20190116_5c3fc6aa51d0e3.49076914.jpg?itok=YbSnjIc1",
+    "power": 8,
+    "wisdom": 8
+  },
+  {
+    "id": 4,
+    "name": "Green Lantern",
+    "image": "https://www.dccomics.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_GreenLantern_20190116_5c3fc8c14ceda8.50076512.jpg?itok=WPW1sVms",
+    "power": 8,
+    "wisdom": 6
+  }
+]

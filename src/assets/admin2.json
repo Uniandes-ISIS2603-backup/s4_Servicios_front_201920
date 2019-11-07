@@ -1,0 +1,17 @@
+{
+  "id": 2,
+  "name": "Superman",
+  "text": "Fromhisblueuniformtohisflowingredcapetothe'S'shieldonhischest,SupermanisoneofthemostimmediatelyrecognizableandbelovedDCSuperHeroesofalltime.TheManofSteelistheultimatesymboloftruth,justice,andhope.Heistheworld'sfirstSuperHeroandaguidinglighttoall.Thetipofthespearinarevolutionthatwouldchangethelandscapeofpopculture,Supermanhasspentthelasteightyyearsredefiningwhatitmeanstostandfortruth,justiceandtheAmericanway.ThelastsurvivorofthedoomedplanetKrypton,raisedinthequietheartlandofSmallville,Kansas,Supermanisasmuchalegendasheisaman:thegoldstandardofheroism,compassionandresponsibility.Thoughhispowersmakehimgod-likenexttohishumancompatriots,Superman'sstoryisnotoneofgreedorconquest.Instead,hestrivestorepresenttheinherentgoodnessofthehumanspirit,andthecapacityofeverylivingthingtodorightbytheirneighbors.",
+  "movies": [
+    {
+      "id": 1,
+      "name": "Superman",
+      "year": 1978
+    },
+    {
+      "id": 2,
+      "name": "Man of steel",
+      "year": 2013
+    }
+  ]
+}

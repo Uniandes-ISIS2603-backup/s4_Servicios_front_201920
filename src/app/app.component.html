@@ -1,18 +1,36 @@
-<h1>Solicitudes</h1>
-<br/>
-<h3>Haga click en el botón para revisar las solicitudes hechas hasta la fecha :)</h3>
-<br/>
-<div style="width: 750px; margin: 0 auto;">
-  <button class="btn btn-outline-success btn-block nav-link active" routerLink="solicitudes/list" routerLinkActive="active" >Solicitudes</button>
-</div>
-<br/>
-      <div class="container-fluid">
-    <div class="border m-5 row">
-      <div class="col">
-        <router-outlet></router-outlet>
-      </div>
-      <div class="col">
-        <router-outlet name="detail"></router-outlet>
-      </div>
-    </div>
-  </div>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="admins/lista" routerLinkActive="active">
+    <img src="https://www.lansweeper.com/wp-content/uploads/2018/05/ASSET-USER-ADMIN.png" width="40" height="40" class="d-inline-block align-top" alt="">
+    Admin
+  </a>
+       
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Opciones
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="admins/lista" routerLinkActive="active">Cuentas clientes</a>
+          <a class="dropdown-item" href="#">Cuentas trabajador</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+      
+</nav>
+
+
+
+
+<router-outlet></router-outlet>
+<router-outlet name="detail"></router-outlet>

@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <p class="h3">
+		Nombre: {{adminDetail.name}}
+	</p>
+  <p class="h3">
+		Descripcion: 
+	</p>
+  <p>
+		{{adminDetail.text}} 
+	</p>
+  <p class="h3">
+		Servicios ofrecidos: 
+	</p>
+	<div class="col">
+		<table class="table table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th>#</th>
+          <th>Servicio</th>
+          <th>Completados</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let movie of adminDetail.movies">
+          <th>{{movie.id}}</th>
+          <td>{{movie.name}}</td>
+          <td>{{movie.year}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
