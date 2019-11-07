@@ -1,0 +1,12 @@
+{
+    "id":1,
+    "descripcion":"Arreglo Lolsito",
+    "estado":"Validado",
+    "foto":"https://i.blogs.es/7f0b02/lol/450_1000.jpg",
+    "fechaInicio":"21/01/2000",
+    "calificacion":{
+      "id":1,
+      "comentario": "Excelente servicio.",
+      "puntuacion": 5
+    }
+  }

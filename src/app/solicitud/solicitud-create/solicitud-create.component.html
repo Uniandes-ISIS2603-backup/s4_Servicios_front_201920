@@ -1,0 +1,41 @@
+<h1>Crear Solicitud</h1>
+<br/>
+<form [formGroup]="solicitudForm" (ngSubmit)="createSolicitud(solicitudForm.value)">
+
+        <div class="form-group mx-sm-3 mb-2">
+         <label for="id">
+           ID
+         </label>
+         <input novalidate
+           id="id"
+           class="form-control"
+           formControlName="id"
+           placeholder="The id">
+
+           <div class="alert alert-danger alert-dismissible fade show"
+           *ngIf="solicitudForm.get('id').hasError('required') && solicitudForm.get('id').touched">
+           Id required
+       </div>
+        </div>
+     
+        <div class="form-group  mx-sm-3 mb-2">
+         <label for="description">
+           Description
+         </label>
+        <input id="description" type="text"
+          class="form-control"
+          formControlName="description"
+          placeholder="The description">
+
+          <div class="alert alert-danger alert-dismissible fade show"
+          *ngIf="solicitudForm.get('description').hasError('required') && solicitudForm.get('description').touched">
+          Description required
+      </div>
+
+       </div>
+     
+       <button class="button mx-sm-3 mb-2" type="submit"   
+               [disabled]="solicitudForm.invalid">Create</button>
+     
+     </form>
+    

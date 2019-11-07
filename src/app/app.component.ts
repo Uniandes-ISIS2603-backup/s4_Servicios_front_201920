@@ -1,30 +1,21 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth/auth.service';
 
-/**
- * The app component. This component is the base of s4_servicios-Front
- */
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit {
+  
+  title: string;
 
-    /**
-     * The title that appears on the NavBar and the web browser
-     */
-    title: String;
+  ngOnInit(): void {
+    this.title = "s4_servicios-Front";
+    this.authService.start();
+  }
 
-    /**
-     * Assigns a title to the web page
-     */
-    ngOnInit(): void {
-        this.title = "s4_servicios-Front";
-        this.authService.start();
-    }
-
-       /**
+  /**
      * @ignore
      */
     constructor(private authService: AuthService) { }
@@ -33,9 +24,5 @@ export class AppComponent implements OnInit {
         this.authService.logout()
     }
 
+
 }
-
-
-
-
-
