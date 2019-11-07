@@ -1,0 +1,39 @@
+  
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+         <br>
+            <h2 class="text-center">Agregar nuevo servicio Ofrecido</h2>
+             <br>
+                <form [formGroup]="servicioOfrecidoForm" (ngSubmit)="createServicioOfrecido(servicioOfrecidoForm)">
+                    <div class="form-group  ">
+                        <label for="servicioOfrecidoName"><b>Nombre</b></label>
+                            <input 
+                             class="form-control" 
+                            id="servicioOfrecidoName" 
+                            placeholder="Nombre del servicio">    
+            
+                        <label for="serivioOfrecidoDescripcion"><b>Descripción</b></label>
+                            <input  class="form-control" 
+                                    id="serivioOfrecidDescripcion"
+                                    placeholder="Descripción del servicio" >
+
+                        <label for="serivioOfrecidoTipo"><b>Tipo</b></label>
+                             <label for="serivioOfrecidoPrecio"><b>Precio</b></label>
+                             <input class="form-control" 
+                                    id="serivioOfrecidPrecio"
+                                    placeholder="Precio del servicio">
+                             </div>
+
+                             <br>
+                             <div class="row form-inline justify-content-center align-self-center">
+                                 <button type="submit" class="btn btn-primary">Create</button>
+                                 <div class="divider"></div>
+                                 <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
+                             </div>                        
+                    </form>
+                    <br>
+                </div>
+            </div>
+</div>
+

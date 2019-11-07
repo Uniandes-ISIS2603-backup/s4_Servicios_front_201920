@@ -24,4 +24,7 @@ export class ServicioOfrecidoService {
         return this.http.get<ServicioOfrecidoDetail>(API_URL +  serviciosOfrecidos +'/' + servicioOfrecidoId);
   }
 
+  createServicioOfrecido(servicioOfrecido): Observable<ServicioOfrecidoDetail> {
+    return this.http.post<ServicioOfrecidoDetail>(API_URL +servicioOfrecido, servicioOfrecido);
+}
 }

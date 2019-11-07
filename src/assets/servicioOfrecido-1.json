@@ -1,7 +1,7 @@
 {
   "id": 1,
   "nombre": "Cambiar guardas",
-  "descripcion": "Se relaiza el cambio de las guardas de la puerta idnicada.",
+  "descripcion": "Se realiza el cambio de las guardas de la puerta indicada.",
   "precio": 123.2,
   "tipo": "Cerrajeria"   
 }
