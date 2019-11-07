@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import {ToastrService} from 'ngx-toastr';
 
 import { Solicitud } from "../solicitud";
 import { SolicitudService } from "../solicitud.service";
@@ -14,22 +15,39 @@ import { SolicitudService } from "../solicitud.service";
 })
 export class SolicitudCreateComponent{
 
-    solicitudForm: FormGroup;
+    solicitud: Solicitud;
 
     constructor(
         private solicitudService: SolicitudService,
-        private formBuilder: FormBuilder
+        private toastrService: ToastrService
     ){
-        this.solicitudForm = this.formBuilder.group({
-            id: ["", [Validators.required]],
-            description: ["", [Validators.required, Validators.minLength(5)]]
-        });
     }
 
-    createSolicitud(newSolicitud: Solicitud) {
+    @Output() cancel = new EventEmitter();
+
+    @Output() create = new EventEmitter();
+
+
+    createSolicitud(): Solicitud {
         // Process checkout data here
-        console.warn("Your order has been submitted", newSolicitud);
     
-       this.solicitudForm.reset();
+        this.solicitudService.createSolicitud(this.solicitud)
+            .subscribe((solicitud) => {
+                 this.solicitud = solicitud;
+                 this.create.emit();
+                 this.toastrService.success("The solicitud was created", "Solicitud creation");
+            }, err => {
+                this.toastrService.error(err, "Error");
+            });
+        return this.solicitud;
       }
+
+      cancelCreation(): void{
+          this.cancel.emit();
+      }
+
+      ngOnInit() {
+        this.solicitud = new Solicitud();
+      }
+
 }
