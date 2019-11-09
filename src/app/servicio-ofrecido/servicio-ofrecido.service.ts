@@ -25,6 +25,8 @@ export class ServicioOfrecidoService {
   }
 
   createServicioOfrecido(servicioOfrecido): Observable<ServicioOfrecidoDetail> {
-    return this.http.post<ServicioOfrecidoDetail>(API_URL +servicioOfrecido, servicioOfrecido);
+        var obj = {descripcion: servicioOfrecido.descripcion, precio: servicioOfrecido.precio, nombre: servicioOfrecido.nombre, tipo: servicioOfrecido.tipo}
+      console.log(obj);
+    return this.http.post<ServicioOfrecidoDetail>(API_URL +serviciosOfrecidos, obj);
 }
 }

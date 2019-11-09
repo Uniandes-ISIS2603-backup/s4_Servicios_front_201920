@@ -6,6 +6,7 @@ import {ToastrService} from 'ngx-toastr';
 
 import {ServicioOfrecidoService} from '../servicio-ofrecido.service';
 import {ServicioOfrecido} from '../servicio-ofrecido';
+import {ServicioOfrecidoDetail} from '../servicio-ofrecido-detail';
 
 @Component({
     selector: 'app-servicio-ofrecido-create',
@@ -21,14 +22,14 @@ import {ServicioOfrecido} from '../servicio-ofrecido';
             private router: Router
         ) {}
 
-            servicioOfrecido : ServicioOfrecido;
+            servicioOfrecido : ServicioOfrecidoDetail;
 
             cancelCreation(): void {
                 this.toastrService.warning('The servicio ofrecido wasn\'t created', 'Book creation');
                 this.router.navigate(['/servicios-ofrecidos/list']);
             }
 
-            createServicioOfrecido(): ServicioOfrecido {
+            createServicioOfrecido(): ServicioOfrecidoDetail {
                 this.servicioOfrecidoService.createServicioOfrecido(this.servicioOfrecido)
                     .subscribe(serv => {
                         this.servicioOfrecido.id = serv.id;
@@ -40,7 +41,7 @@ import {ServicioOfrecido} from '../servicio-ofrecido';
             }
 
             ngOnInit() {
-                this.servicioOfrecido = new ServicioOfrecido();
+                this.servicioOfrecido = new ServicioOfrecidoDetail();
             }
 
 

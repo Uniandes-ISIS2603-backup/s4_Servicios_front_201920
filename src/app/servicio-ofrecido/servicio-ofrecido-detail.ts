@@ -3,5 +3,7 @@ import {ServicioOfrecido} from "./servicio-ofrecido";
 
 
 export class ServicioOfrecidoDetail extends ServicioOfrecido{
-  description: string;
+  descripcion: string;
+  tipo: string;
+  precio: number;
 }
