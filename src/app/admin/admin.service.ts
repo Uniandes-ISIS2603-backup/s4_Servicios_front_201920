@@ -4,8 +4,8 @@ import { Admin } from "./admin";
 import { AdminDetail } from "./admin-detail";
 import { Observable } from "rxjs";
 
-const API_URL = "../../assets/";
-const admins = "admins.json";
+const API_URL = "environments.apiURL";
+const admins = "/trabajadores";
 
 @Injectable()
 export class AdminService {
