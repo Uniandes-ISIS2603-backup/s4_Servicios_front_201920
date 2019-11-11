@@ -2,11 +2,11 @@ export class Factura {
 
     id: number;
 
-    duracion: number;
+    precioMateriales: number;
     
-    constructor(id: number, duracion: number){
+    constructor(id: number, precioMateriales: number){
       this.id = id;
-      this.duracion = duracion;
+      this.precioMateriales = precioMateriales;
     }
 
 }
