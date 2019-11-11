@@ -30,7 +30,7 @@ import { AuthModule } from './auth/auth.module';
      SolicitudModule,
      ServicioOfrecidoModule,
      ClienteModule, 
-        FacturaModule
+     FacturaModule,
      BrowserAnimationsModule, 
      ModalDialogModule.forRoot(),
      AuthModule,
@@ -43,7 +43,7 @@ import { AuthModule } from './auth/auth.module';
     NgxPermissionsModule.forRoot(),
     NgbModule
   ],
-  declarations: [ AppComponent, HelloComponent, HeaderComponen ],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent ],
 
   bootstrap:    [ AppComponent ],
   providers: [
