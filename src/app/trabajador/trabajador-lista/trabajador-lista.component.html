@@ -1,0 +1,21 @@
+<br/>
+<div class="container">
+	<div class="row">
+		<b>Total de usuarios: </b> <p> &nbsp; {{total()}}</p>
+	</div>
+	<div class="row">
+		<div class="card" style="width: 15rem;" *ngFor="let trabajador of trabajadores">
+			<img src={{trabajador.foto}} class="card-img-top">
+			<div class="card-body">
+				<h3 class="card-title">{{trabajador.nombre}}</h3>
+				<ul>
+					<li>Telefono: {{trabajador.telefono}}</li>
+					<li>Correo: {{trabajador.correo}}</li>
+				</ul>
+				<a class="btn btn-primary" [routerLink] ="['/trabajadores', { outlets: { 'detail': [trabajador.id] } }]">Ver perfil</a>
+			</div>
+		</div>
+	</div>
+</div>
+<br/>
+<app-trabajador-create></app-trabajador-create>

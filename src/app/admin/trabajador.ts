@@ -1,4 +1,4 @@
-export class Admin {
+export class Trabajador {
 
   contrasena: string;
 

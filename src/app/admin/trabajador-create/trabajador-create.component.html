@@ -1,0 +1,86 @@
+<div><h1>
+    Crear otro Usuario
+    </h1></div>
+    <form name="admin" (ngSubmit)="f.form.valid && createAdmin()" #f="ngForm" novalidate>
+        <div class="form-group">
+            <label for="adminId"><b>Id</b></label>
+            <input type="number" name="adminId" class="form-control" id="adminId" [(ngModel)]="admin.id"
+                #adminId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminId.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The admin's id is missing</div>
+            </div>
+            <label for="adminNombre"><b>Nombre</b></label>
+            <input type="text" name="adminNombre" class="form-control" id="adminNombre" [(ngModel)]="admin.nombre"
+                #adminNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminNombre.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The admin's nombre is missing</div>
+            </div>
+            <label for="adminUsuario"><b>Usuario</b></label>
+            <input type="text" name="adminUsuario" class="form-control" id="adminUsuario" [(ngModel)]="admin.usuario"
+                #adminUsuario="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminUsuario.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The admin's usuario is missing</div>
+            </div>
+            <label for="adminContrasena"><b>Password</b></label>
+            <input type="password" name="adminContrasena" class="form-control" id="adminContrasena" [(ngModel)]="admin.contrasena"
+                #adminContrasena="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminContrasena.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The admin's password is missing</div>
+            </div>
+            <label for="adminTelefono"><b>Telefono</b></label>
+            <input type="number" name="adminTelefono" class="form-control" id="adminTelefono" [(ngModel)]="admin.telefono"
+                #adminTelefono="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminTelefono.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The admin's telefono is missing</div>
+            </div>
+            <label for="adminCorreo"><b>Correo</b></label>
+            <input type="text" name="adminCorreo" class="form-control" id="adminCorreo" [(ngModel)]="admin.correo"
+                #adminCorreo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminCorreo.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The admin's correo is missing</div>
+            </div>
+            <label for="adminFoto"><b>Foto</b></label>
+            <input type="text" name="adminFoto" class="form-control" id="adminFoto" [(ngModel)]="admin.foto"
+                #adminFoto="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminFoto.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The admin's foto is missing</div>
+            </div>
+            <label for="adminDisponibilidad"><b>Disponibilidad</b></label>
+            <input type="text" name="adminDisponibilidad" class="form-control" id="adminDisponibilidad" [(ngModel)]="admin.disponibilidad"
+                #adminDisponibilidad="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminDisponibilidad.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The admin's disponibilidad is missing</div>
+            </div>
+            <label for="adminHojaDeVida"><b>Hoja de Vida</b></label>
+            <input type="text" name="adminHojaDeVida" class="form-control" id="adminHojaDeVida" [(ngModel)]="admin.hojaVida"
+                #adminHojaDeVida="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminHojaDeVida.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The admin's hoja de vida is missing</div>
+            </div>
+            <label for="adminEsApto"><b>Es apto?</b></label>
+            <input type="text" name="adminEsApto" class="form-control" id="adminEsApto" [(ngModel)]="admin.esApto"
+                #adminEsApto="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminEsApto.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The admin's aptitud is missing</div>
+            </div>
+            <label for="adminSeguroSocial"><b>Seguro Social</b></label>
+            <input type="text" name="adminSeguroSocial" class="form-control" id="adminSeguroSocial" [(ngModel)]="admin.seguroSocial"
+                #adminSeguroSocial="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminSeguroSocial.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The admin's Seguro Social is missing</div>
+            </div>
+            <label for="adminRiesgos"><b>Riesgos</b></label>
+            <input type="text" name="adminRiesgos" class="form-control" id="adminRiesgos" [(ngModel)]="admin.riesgos"
+                #adminRiesgos="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminRiesgos.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The admin's riesgos is missing</div>
+            </div>
+            
+        </div>
+        <div class="row form-inline justify-content-center align-self-center">
+            <button type="submit" class="btn btn-primary">Create</button>
+            <div class="divider"></div>
+            <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
+        </div>
+    </form>
+    
