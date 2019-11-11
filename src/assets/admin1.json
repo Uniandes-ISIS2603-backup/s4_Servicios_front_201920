@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "name": "Batman",
+  "text": "One of the most iconic fictional characters in the world,Batman has dedicated his life toanendlesscrusade,awaronall criminalsinthenameofhis murdered parents, who were taken from him when he was just a child. Since that tragic night,he has trained his body and mind to near physical perfection to be a self-made SuperHero.He'sdevelopedanarsenaloftechnologythatwouldputmostarmiestoshame.Andhe'sassembledteamsofhisfellowDCSuperHeroes,liketheJusticeLeague,theOutsidersandBatman,Incorporated.Aplayboybillionairebyday,BruceWayne’sdoublelifeaffordshimthecomfortofalifewithoutfinancialworry,aloyalbutler-turned-guardianandtheperfectbaseofoperationsintheancientnetworkofcavesbeneathhisfamily’ssprawlingestate.Bynight,however,heshedsallpretense,donshisiconicscallopedcapeandpointedcowlandtakestotheshadowystreets,skiesandrooftopsofGothamCity.",
+  "movies": [
+    {
+      "id": 1,
+      "name": "The Dark Knight",
+      "year": 2008
+    },
+    {
+      "id": 2,
+      "name": "Batman Returns",
+      "year": 1992
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 3,
+  "name": "WonderWoman",
+  "text": "OneofthemostbelovedandiconicDCSuperHeroesofalltime,WonderWomanhasstoodfornearlyeightyyearsasasymboloftruth,justiceandequalitytopeopleeverywhere.RaisedonthehiddenislandofThemyscira,alsoknownasParadiseIsland,DianaisanAmazon,likethefiguresofGreeklegend,andherpeople'sgifttohumanity.AsThemyscira'semissarytoMan'sWorld,Dianahasmadeitherdutytoleadbyexample,evenifthedifferencesbetweenherbirthplaceandnewhomesometimespresenthurdlesforhertojump.Shehascometorepresentthepossibilityandpotentialoflifewithoutwar,hateorviolence,andsheisabeaconofhopetoallwhofindthemselvesinneed.ShestandsasanequalamongthemostpowerfulSuperHeroes,withasenseofpurposetoprotecttheworldfrominjusticeinallforms.Diana'sjob,however,isanythingbuteasy.Constantlytornbetweenhermissiontopromotepeaceandherneedtofightbackagainstthepervasiveviolenceofhernewhome,Dianastrugglestowalkalinebetweenherwarriorstrengthandendlesscompassioneachandeveryday.",
+  "movies": [
+    {
+      "id": 1,
+      "name": "Wonder Woman",
+      "year": 2017
+    }
+  ]
+}

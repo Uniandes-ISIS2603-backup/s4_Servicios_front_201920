@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <app-header></app-header>
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -60,3 +61,117 @@
   <app-solicitud-create></app-solicitud-create>
 
   
+=======
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="admins/lista" routerLinkActive="active">
+    <img src="https://www.lansweeper.com/wp-content/uploads/2018/05/ASSET-USER-ADMIN.png" width="40" height="40" class="d-inline-block align-top" alt="">
+    Admin
+  </a>
+       
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Opciones
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="admins/lista" routerLinkActive="active">Cuentas clientes</a>
+          <a class="dropdown-item" href="#">Cuentas trabajador</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+      
+</nav>
+
+
+
+
+<router-outlet></router-outlet>
+<router-outlet name="detail"></router-outlet>
+
+
+
+<div><h1>
+  Crear otro Usuario
+  </h1></div>
+  
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="Nombre">Nombre</label>
+        <input type="email" class="form-control" id="Nombre" placeholder="Nombre">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="Usuario">Usuario</label>
+        <input type="password" class="form-control" id="Usuario" placeholder="Usuario">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="Contrasena">Contrasena</label>
+        <input type="password" class="form-control" id="Contrasena" placeholder="Contrasena">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="Telefono">Telefono</label>
+        <input type="password" class="form-control" id="Telefono" placeholder="Telefono">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="Correo">Correo</label>
+        <input type="password" class="form-control" id="Correo" placeholder="Correo">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="Foto">Foto</label>
+        <input type="password" class="form-control" id="Foto" placeholder="Foto">
+      </div>
+    </div>
+    
+    <div class="form-group col-md-6">
+        <label for="Disponibilidad">Disponibilidad</label>
+        <select id="Disponibilidad" class="form-control">
+          <option selected>inactivo</option>
+          <option>disponible</option>
+          <option></option>
+        </select>
+      </div>
+  
+    <div class="form-row ">
+    <div class="form-group">
+      <label for="Hoja de Vida">Hoja de Vida</label>
+      <input type="text" class="form-control" id="Hoja de Vida" placeholder="Hoja de Vida">
+    </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Es Apto</label>
+        <select id="inputState" class="form-control">
+          <option selected>no</option>
+          <option>si</option>
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="Seguro Social">Seguro Social</label>
+        <input type="text" class="form-control" id="Seguro Social">
+      </div>
+       <div class="form-group col-md-2">
+        <label for="Riesgos">Riesgos</label>
+        <input type="text" class="form-control" id="Riesgos">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Acepta terminos y condiciones
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Crear nuevo usuario</button>
+  </form>
+>>>>>>> ramaC
