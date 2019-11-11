@@ -23,8 +23,8 @@ const routes: Routes = [
           path: 'login',
           component: AuthLoginComponent,
           canActivate: [NgxPermissionsGuard],
-            permissions: {
           data: {
+          permissions: {        
               only: ['GUEST']
             }
           }
@@ -34,29 +34,34 @@ const routes: Routes = [
           component: AuthSignUpComponent,
           canActivate: [NgxPermissionsGuard],
           data: {
-            permissions: {
+          permissions: {
               only: ['GUEST']
-          }
+             }
             }
         }
-      ]
+      ]   
     },
     {
       path: 'home',
       component: AuthLoginComponent
     },
+    //  {
+    //  path: '**',
+    //  redirectTo: 'home',
+    //  },
     {
     path: 'solicitudes',
     children: [{
       path: 'list',
       component: SolicitudListComponent 
-    },
-    {
+      },
+      {
       path: ':id',
       component: SolicitudDetailComponent,
       outlet: 'detail'
-    }
-  },
+      }
+      ]
+    },
     {
         path: 'serviciosOfrecidos',
         children:[{
@@ -71,9 +76,9 @@ const routes: Routes = [
         {
             path:'add',
             component: ServicioOfrecidoCreateComponent,
-          }
+        }
         ]
-      },
+    },
   { 
     path : 'clientes',
     children: [
@@ -89,6 +94,7 @@ const routes: Routes = [
   }
 ];
 @NgModule({
+  imports: [
     CommonModule,
     RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})
   ],
