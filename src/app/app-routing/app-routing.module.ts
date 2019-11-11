@@ -2,20 +2,20 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule, Routes } from "@angular/router";
 
-import { AdminListaComponent } from "../admin/admin-lista/admin-lista.component";
-import { AdminDetailComponent } from "../admin/admin-detail/admin-detail.component";
+import { TrabajadorListaComponent } from "../trabajador/trabajador-lista/trabajador-lista.component";
+import { TrabajadorDetailComponent } from "../trabajador/trabajador-detail/trabajador-detail.component";
 
 const routes: Routes = [
   {
-    path: "admins",
+    path: "trabajadores",
     children: [
       {
         path: "lista",
-        component: AdminListaComponent
+        component: TrabajadorListaComponent
       },
       {
         path: ":id",
-        component: AdminDetailComponent,
+        component: TrabajadorDetailComponent,
         outlet: "detail"
       }
     ]
