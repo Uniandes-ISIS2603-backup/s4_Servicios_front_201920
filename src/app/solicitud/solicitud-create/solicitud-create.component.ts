@@ -2,7 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import {ToastrService} from 'ngx-toastr';
 
-import { Solicitud } from "../solicitud";
+import { SolicitudDetail } from "../solicitud-detail";
 import { SolicitudService } from "../solicitud.service";
 
 /**
@@ -15,7 +15,7 @@ import { SolicitudService } from "../solicitud.service";
 })
 export class SolicitudCreateComponent{
 
-    solicitud: Solicitud;
+    solicitud: SolicitudDetail;
 
     constructor(
         private solicitudService: SolicitudService,
@@ -28,7 +28,7 @@ export class SolicitudCreateComponent{
     @Output() create = new EventEmitter();
 
 
-    createSolicitud(): Solicitud {
+    createSolicitud(): SolicitudDetail {
         // Process checkout data here
     
         this.solicitudService.createSolicitud(this.solicitud)
@@ -47,7 +47,7 @@ export class SolicitudCreateComponent{
       }
 
       ngOnInit() {
-        this.solicitud = new Solicitud();
+        this.solicitud = new SolicitudDetail();
       }
 
 }

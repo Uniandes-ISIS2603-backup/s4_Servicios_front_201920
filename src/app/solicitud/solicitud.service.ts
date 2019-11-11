@@ -31,8 +31,8 @@ export class SolicitudService {
       return this.http.get<SolicitudDetail>(API_URL + solicitudes + '/' + solicitudId);
     }
 
-    createSolicitud(solicitud: Solicitud): Observable<Solicitud> {
-      return this.http.post<Solicitud>(API_URL + solicitudes, solicitud, this.httpOptions).pipe(tap((solicitud: Solicitud) => console.log(`added solicitud w/ ${solicitud.descripcion} id=${solicitud.id}`)));
+    createSolicitud(solicitud: SolicitudDetail): Observable<SolicitudDetail> {
+      return this.http.post<SolicitudDetail>(API_URL + solicitudes, solicitud, this.httpOptions).pipe(tap((solicitud: SolicitudDetail) => console.log(`added solicitud w/ ${solicitud.descripcion} id=${solicitud.id}`)));
     }
     
 }
