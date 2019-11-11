@@ -26,6 +26,7 @@ import { AuthModule } from './auth/auth.module';
      ReactiveFormsModule,
      AppRoutingModule, 
      SolicitudModule,
+     ServicioOfrecidoModule,
      BrowserAnimationsModule, 
      ModalDialogModule.forRoot(),
      AuthModule,
@@ -50,41 +51,3 @@ import { AuthModule } from './auth/auth.module';
 })
 export class AppModule { }
 
-
-
-
-
-
-@NgModule({
-    imports: [
-        HttpClientModule,
-        BrowserModule,
-        FormsModule,
-        ReactiveFormsModule,
-        AppRoutingModule,
-        ServicioOfrecidoModule,
-        BrowserAnimationsModule,
-        ModalDialogModule.forRoot(),
-        AuthModule,        
-        ToastrModule.forRoot({
-            timeOut: 10000,
-            positionClass: 'toast-bottom-right',
-            preventDuplicates: true,
-        }),
-        NgxPaginationModule,
-        NgxPermissionsModule.forRoot(),
-        NgbModule
-    ],
-    declarations: [
-        AppComponent
-    ],
-    bootstrap: [AppComponent],
-    providers: [
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: HttpErrorInterceptor,
-            multi: true
-        }
-    ]
-})
-export class AppModule {}
