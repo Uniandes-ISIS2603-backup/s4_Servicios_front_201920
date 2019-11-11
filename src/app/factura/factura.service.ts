@@ -4,9 +4,10 @@ import {Factura} from './factura';
 import {FacturaDetail} from './factura-detail';
 import {Observable, of} from 'rxjs';
 import { catchError, map, tap } from "rxjs/operators";
+import {environment} from '../../environments/environment';
 
-const API_URL = "../../assets/";
-const facturas = "facturas.json";
+const API_URL = environment.apiURL;
+const facturas = '/facturas';
 
 @Injectable({ providedIn: "root" })
 export class FacturaService{
@@ -19,7 +20,7 @@ export class FacturaService{
   }
 
   getFacturaDetail(facturaId): Observable<FacturaDetail>{
-    return this.http.get<FacturaDetail>(API_URL + 'factura' + facturaId + ".json");
+    return this.http.get<FacturaDetail>(API_URL +  facturas +'/' + facturaId);
   }
 
   private facturasUrl = "api/facturas"; // URL to web api
