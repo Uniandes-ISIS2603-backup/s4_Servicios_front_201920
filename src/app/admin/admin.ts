@@ -1,12 +1,26 @@
 export class Admin {
 
+  contrasena: string;
+
+  correo: string;
+
+  disponibilidad: boolean;
+
+  esApto: boolean;
+
+  foto: string;
+
+  hojaVida: string;
+
   id: number;
 
-  name: string;
+  nombre: string;
 
-  power: number;
+  riesgos: string;
 
-  wisdom: number;
+  seguroSocial: string;
 
-  image: string;
+  telefono: number;
+
+  usuario: string;
 }

@@ -3,12 +3,12 @@
 		<b>Total de usuarios: </b> <p> &nbsp; {{total()}}</p>
 	<div class="row">
 		<div class="card" style="width: 15rem;" *ngFor="let admin of admins">
-			<img src={{admin.image}} class="card-img-top">
+			<img src={{admin.foto}} class="card-img-top">
 			<div class="card-body">
-				<h3 class="card-title">{{admin.name}}</h3>
+				<h3 class="card-title">{{admin.nombre}}</h3>
 				<ul>
-					<li>Servicio: {{admin.wisdom}}</li>
-					<li>Calificacion: {{admin.power}}</li>
+					<li>Telefono: {{admin.telefono}}</li>
+					<li>Correo: {{admin.correo}}</li>
 				</ul>
 				<a class="btn btn-primary" [routerLink] ="['/admins', { outlets: { 'detail': [admin.id] } }]">Ver perfil</a>
 			</div>
