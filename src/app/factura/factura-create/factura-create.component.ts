@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit} from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { FacturaService } from '../factura.service';
 import { Factura } from '../factura';

@@ -31,8 +31,9 @@ export class FacturaDetailComponent implements OnInit {
   onLoad(params) {
 
     this.factura_id = parseInt(params['id']);
-    this.facturaDetail = new FacturaDetail();
+    //this.facturaDetail = new FacturaDetail();
     this.getFacturaDetail();
+
   }
 
   ngOnInit() {
