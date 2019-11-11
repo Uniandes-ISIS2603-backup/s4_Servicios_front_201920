@@ -5,23 +5,44 @@
          <br>
             <h2 class="text-center">Agregar nuevo servicio Ofrecido</h2>
              <br>
-                <form [formGroup]="servicioOfrecidoForm" (ngSubmit)="createServicioOfrecido(servicioOfrecidoForm)">
+                <form name="servicioOfrecido" (ngSubmit)="createServicioOfrecido()"  #f="ngForm" novalidate>
                     <div class="form-group  ">
                         <label for="servicioOfrecidoName"><b>Nombre</b></label>
                             <input 
+                            type="text"
+                            name="servicioOfrecidoName"
                              class="form-control" 
                             id="servicioOfrecidoName" 
-                            placeholder="Nombre del servicio">    
+                            [(ngModel)]="servicioOfrecido.nombre"
+                            #servicioOfrecidoName="ngModel"
+                            placeholder="Nombre del servico">    
             
                         <label for="serivioOfrecidoDescripcion"><b>Descripción</b></label>
-                            <input  class="form-control" 
-                                    id="serivioOfrecidDescripcion"
+                            <input  type="text"
+                                    name="servicioOfrecidoDescripcion"
+                                    class="form-control" 
+                                    id="serivioOfrecidoDescripcion"
+                                    [(ngModel)]="servicioOfrecido.descripcion"
+                                    #servicioOfrecidoDescripcion="ngModel"
                                     placeholder="Descripción del servicio" >
 
                         <label for="serivioOfrecidoTipo"><b>Tipo</b></label>
+                                <input class="form-control" 
+                                    type="text"
+                                    name="servicioOfrecidoTipo"
+                                    id="serivioOfrecidoTipo"
+                                    [(ngModel)]="servicioOfrecido.tipo"
+                                    #servicioOfrecidoTipo="ngModel"
+                                    placeholder="Tipo del servicio">
+                
+
                              <label for="serivioOfrecidoPrecio"><b>Precio</b></label>
-                             <input class="form-control" 
-                                    id="serivioOfrecidPrecio"
+                             <input  type="text"
+                                     name="servicioOfrecidoPrecio"
+                                    class="form-control" 
+                                    id="serivioOfrecidoPrecio"
+                                    [(ngModel)]="servicioOfrecido.precio"
+                                    #servicioOfrecidoPrecio="ngModel"
                                     placeholder="Precio del servicio">
                              </div>
 
