@@ -34,4 +34,12 @@ export class FacturaService{
     return this.http.get<Factura[]>(this.facturasUrl);
   }
 
+  createFactura(factura): Observable<FacturaDetail> {
+    var obj = {id: factura.id, precioMateriales: factura.precioMateriales, 
+      duracion: factura.duracion, fecha: factura.fecha, pagada:factura.pagada,
+      primerPago: factura.primerPago
+    }
+  return this.http.post<FacturaDetail>(API_URL + facturas, obj);
+}
+
 }

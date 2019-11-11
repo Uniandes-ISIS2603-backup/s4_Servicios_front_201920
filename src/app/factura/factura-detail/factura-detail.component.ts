@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FacturaService } from '../factura.service';
 import { FacturaDetail } from '../factura-detail';
 import { ActivatedRoute, Params } from '@angular/router';
+import { Factura } from '../factura';
 
 @Component({
   selector: 'app-factura-detail',
@@ -15,7 +16,6 @@ export class FacturaDetailComponent implements OnInit {
   }
 
   facturaDetail: FacturaDetail;
-
 
   @Input() factura_id: number;
 
@@ -42,6 +42,10 @@ export class FacturaDetailComponent implements OnInit {
 
   ngOnDestroy() {
     this.loader.unsubscribe();
+  }
+
+  crearPrueba():void{
+
   }
 
 }

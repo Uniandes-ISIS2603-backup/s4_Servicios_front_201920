@@ -5,6 +5,7 @@ import { Factura } from '../factura';
 import {Router} from '@angular/router';
 import {DatePipe} from '@angular/common';
 import {ToastrService} from 'ngx-toastr';
+import {FacturaDetail} from '../factura-detail';
 
 @Component({
   selector: 'app-factura-create',
@@ -13,28 +14,32 @@ import {ToastrService} from 'ngx-toastr';
 })
 export class FacturaCreateComponent implements OnInit{
 
-  facturaForm: FormGroup;
-  facturas: Factura[];
-
  constructor(
     private facturaService: FacturaService,
-    private formBuilder: FormBuilder
-  ) {
-    this.facturaForm = this.formBuilder.group({
-      id: ["", [Validators.required, Validators.minLength(2)]],
-      duracion: ["", Validators.required]
+    private toastrService: ToastrService,
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) {}
+
+  factura : FacturaDetail;
+
+  cancelCreation(): void {
+    this.toastrService.warning('The factura wasn\'t created', 'Factura creation');
+    this.router.navigate(['/facturas/list']);
+  }
+
+  createFactura():FacturaDetail{
+    this.facturaService.createFactura(this.factura)
+    .subscribe(serv => {
+        this.factura.id = serv.id;
+        this.router.navigate(['/factura/' + serv.id]);
+    }, err => {
+        this.toastrService.error(err, 'Error');
     });
+    return this.factura;
   }
-
-  createFactura():void{
-
-  }
-
-  getFacturas(): void {
-  this.facturaService.getFacturas2().subscribe(facturas => this.facturas = facturas);
- }
-
+  
   ngOnInit() {
-    this.getFacturas();
+    this.factura = new FacturaDetail();
   }
 }
