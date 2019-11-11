@@ -15,6 +15,8 @@ import {ClienteModule} from './cliente/cliente.module';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { SolicitudModule } from './solicitud/solicitud.module';
 import {ServicioOfrecidoModule} from './servicio-ofrecido/servicio-ofrecido.module';
+import { FacturaModule } from './factura/factura.module';
+import { HeaderComponent } from './header/header.component';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { AuthModule } from './auth/auth.module';
@@ -27,8 +29,9 @@ import { AuthModule } from './auth/auth.module';
      AppRoutingModule, 
      SolicitudModule,
      ServicioOfrecidoModule,
-     BrowserAnimationsModule, 
      ClienteModule, 
+        FacturaModule
+     BrowserAnimationsModule, 
      ModalDialogModule.forRoot(),
      AuthModule,
      ToastrModule.forRoot({
@@ -40,7 +43,8 @@ import { AuthModule } from './auth/auth.module';
     NgxPermissionsModule.forRoot(),
     NgbModule
   ],
-  declarations: [ AppComponent, HelloComponent ],
+  declarations: [ AppComponent, HelloComponent, HeaderComponen ],
+
   bootstrap:    [ AppComponent ],
   providers: [
     {

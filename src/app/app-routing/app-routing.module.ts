@@ -11,10 +11,15 @@ import {ServicioOfrecidoListarComponent} from '../servicio-ofrecido/servicio-ofr
 import {ServicioOfrecidoDetailComponent} from '../servicio-ofrecido/servicio-ofrecido-detail/servicio-ofrecido-detail.component';
 import {ServicioOfrecidoCreateComponent} from '../servicio-ofrecido/servicio-ofrecido-create/servicio-ofrecido-create.component';
 
+import { FacturaListComponent } from '../factura/factura-list/factura-list.component';
+import { FacturaDetailComponent } from '../factura/factura-detail/factura-detail.component';
+import { FacturaCreateComponent } from '../factura/factura-create/factura-create.component';
+
 import { SolicitudListComponent } from '../solicitud/solicitud-list/solicitud-list.component';
 import { SolicitudDetailComponent } from '../solicitud/solicitud-detail/solicitud-detail.component';
 
 const routes: Routes = [
+   
 
     {
       path: 'auth',
@@ -91,7 +96,23 @@ const routes: Routes = [
         component: ClienteDetailComponent
       }
     ]
-  }
+  },  {
+        path: 'facturas',
+        children:[{
+          path: 'list',
+          component: FacturaListComponent
+        },
+        {
+          path: ':id',
+          component: FacturaDetailComponent,
+        },
+        {
+          path: 'create',
+          component: FacturaCreateComponent,
+          outlet:'create'
+        }
+        ]
+      }
 ];
 @NgModule({
   imports: [
