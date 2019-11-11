@@ -10,6 +10,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ToastrModule} from 'ngx-toastr';
 import {NgxPermissionsModule} from 'ngx-permissions';
 import { ReactiveFormsModule } from '@angular/forms';
+import {ClienteModule} from './cliente/cliente.module';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { SolicitudModule } from './solicitud/solicitud.module';
@@ -17,17 +18,17 @@ import {ServicioOfrecidoModule} from './servicio-ofrecido/servicio-ofrecido.modu
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { AuthModule } from './auth/auth.module';
-
 @NgModule({
   imports: [
      HttpClientModule,
      BrowserModule,
-     FormsModule, 
      ReactiveFormsModule,
+     FormsModule, 
      AppRoutingModule, 
      SolicitudModule,
      ServicioOfrecidoModule,
      BrowserAnimationsModule, 
+     ClienteModule, 
      ModalDialogModule.forRoot(),
      AuthModule,
      ToastrModule.forRoot({
@@ -50,4 +51,3 @@ import { AuthModule } from './auth/auth.module';
 ]
 })
 export class AppModule { }
-

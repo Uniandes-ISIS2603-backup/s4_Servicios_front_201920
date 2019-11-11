@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import {NgxPermissionsGuard} from 'ngx-permissions';
+import {ClienteListComponent} from '../cliente/cliente-list/cliente-list.component';
+import {ClienteDetailComponent} from '../cliente/cliente-detail/cliente-detail.component';
 
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
@@ -21,8 +23,8 @@ const routes: Routes = [
           path: 'login',
           component: AuthLoginComponent,
           canActivate: [NgxPermissionsGuard],
-          data: {
             permissions: {
+          data: {
               only: ['GUEST']
             }
           }
@@ -34,8 +36,8 @@ const routes: Routes = [
           data: {
             permissions: {
               only: ['GUEST']
-            }
           }
+            }
         }
       ]
     },
@@ -43,10 +45,6 @@ const routes: Routes = [
       path: 'home',
       component: AuthLoginComponent
     },
-  //  {
-   //   path: '**',
-    //  redirectTo: 'home',
-  //  },
     {
     path: 'solicitudes',
     children: [{
@@ -75,11 +73,22 @@ const routes: Routes = [
             component: ServicioOfrecidoCreateComponent,
           }
         ]
+      },
+  { 
+    path : 'clientes',
+    children: [
+      { 
+        path: 'list',
+        component: ClienteListComponent
+      },
+      { 
+        path: ':id',
+        component: ClienteDetailComponent
       }
+    ]
+  }
 ];
-
 @NgModule({
-  imports: [
     CommonModule,
     RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})
   ],

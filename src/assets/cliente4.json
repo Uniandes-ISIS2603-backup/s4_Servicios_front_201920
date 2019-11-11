@@ -1,0 +1,12 @@
+{
+    "id" : 4,
+    "nombre" : "Ana Maria Gomez",
+    "telefono" : 3138894,
+    "mail" : "agomez@hotmail.com",
+    "usuario" : "a.gomez",
+    "contrasena" : "contrasena",
+    "direccion" : "Calle falsa 4",
+    "servicios" : [
+  ],
+    "tarjeta" : "123478556"
+  }

@@ -1,0 +1,12 @@
+{ "id" : 1,
+  "nombre" : "Santiago Cala",    
+  "telefono" : 3138891,
+  "mail" : "s.cala@gmail.com",
+  "usuario" : "s.cala",
+  "contrasena" : "contrasena",
+  "direccion" : "Calle falsa 1",
+  "servicios" : [
+    "primerservicio", "segundoservicio", "tercerservicio"
+  ],
+  "tarjeta" : "123456"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id" : 1,
+    "nombre" : "Santiago Cala",
+    "telefono" : 3138891,
+    "mail" : "s.cala@gmail.com",
+    "usuario" : "s.cala",
+    "contrasena" : "contrasena",
+    "direccion" : "Calle falsa 1"
+  },
+  {
+    "id" : 2,
+    "nombre" : "Natalia Cala",
+    "telefono" : 3138892,
+    "mail" : "n.cala@gmail.com",
+    "usuario" : "n.cala",
+    "contrasena" : "contrasena",
+    "direccion" : "Calle falsa 2"
+  },
+  {
+    "id" : 3,
+    "nombre" : "Alvaro Cala",
+    "telefono" : 3138893,
+    "mail" : "a.cala@bu.com",
+    "usuario" : "a.cala",
+    "contrasena" : "contrasena",
+    "direccion" : "Calle falsa 3"
+  },
+  {
+    "id" : 4,
+    "nombre" : "Ana Maria Gomez",
+    "telefono" : 3138894,
+    "mail" : "agomez@hotmail.com",
+    "usuario" : "a.gomez",
+    "contrasena" : "contrasena",
+    "direccion" : "Calle falsa 4"
+  },
+  {
+    "id" : 5,
+    "nombre" : "Isabel Cuellar",
+    "telefono" : 3138895,
+    "mail" : "icuellar@cesa.com",
+    "usuario" : "i.cuellar",
+    "contrasena" : "contrasena",
+    "direccion" : "Calle falsa 5"
+  }
+]
