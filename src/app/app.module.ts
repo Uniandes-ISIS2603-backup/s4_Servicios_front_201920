@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {HttpErrorInterceptor} from './interceptors/httperrorinterceptor.service';
@@ -22,6 +20,8 @@ import { HeaderComponent } from './header/header.component';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { AuthModule } from './auth/auth.module';
+import { TrabajadorModule } from './trabajador/trabajador.module';
+
 @NgModule({
   imports: [
      HttpClientModule,
@@ -30,6 +30,7 @@ import { AuthModule } from './auth/auth.module';
      FormsModule, 
      AppRoutingModule, 
      SolicitudModule,
+     TrabajadorModule,
      ServicioOfrecidoModule,
      ClienteModule, 
      FacturaModule,
@@ -54,26 +55,5 @@ import { AuthModule } from './auth/auth.module';
         useClass: HttpErrorInterceptor,
         multi: true
     }
-]
-=======
-=======
-import {ToastrModule} from 'ngx-toastr';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
->>>>>>> ramaC
-
-import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-
-import { TrabajadorModule } from './trabajador/trabajador.module';
-
-import { ReactiveFormsModule } from "@angular/forms";
-import { AppRoutingModule } from './app-routing/app-routing.module';
-
-
-@NgModule({
-  imports:      [ BrowserModule, BrowserAnimationsModule, FormsModule, HttpClientModule, TrabajadorModule, ReactiveFormsModule, AppRoutingModule, ToastrModule.forRoot({timeOut: 10000, positionClass: 'toast-bottom-right', preventDuplicates: true,}) ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
->>>>>>> ramaC
-})
-export class AppModule { }
+]})
+export class AppModule{}

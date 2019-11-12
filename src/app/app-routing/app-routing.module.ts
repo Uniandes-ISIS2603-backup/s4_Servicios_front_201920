@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
@@ -18,6 +17,10 @@ import { FacturaCreateComponent } from '../factura/factura-create/factura-create
 
 import { SolicitudListComponent } from '../solicitud/solicitud-list/solicitud-list.component';
 import { SolicitudDetailComponent } from '../solicitud/solicitud-detail/solicitud-detail.component';
+
+
+import { TrabajadorListaComponent } from "../trabajador/trabajador-lista/trabajador-lista.component";
+import { TrabajadorDetailComponent } from "../trabajador/trabajador-detail/trabajador-detail.component";
 
 const routes: Routes = [
    
@@ -95,15 +98,9 @@ const routes: Routes = [
       { 
         path: ':id',
         component: ClienteDetailComponent
-=======
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule, Routes } from "@angular/router";
-
-import { TrabajadorListaComponent } from "../trabajador/trabajador-lista/trabajador-lista.component";
-import { TrabajadorDetailComponent } from "../trabajador/trabajador-detail/trabajador-detail.component";
-
-const routes: Routes = [
+      }
+    ]
+  },
   {
     path: "trabajadores",
     children: [
@@ -115,10 +112,10 @@ const routes: Routes = [
         path: ":id",
         component: TrabajadorDetailComponent,
         outlet: "detail"
->>>>>>> ramaC
       }
     ]
-  },  {
+  }, 
+   {
         path: 'facturas',
         children:[{
           path: 'list',
@@ -134,7 +131,7 @@ const routes: Routes = [
           outlet:'create'
         }
         ]
-      }
+    }
 ];
 @NgModule({
   imports: [
