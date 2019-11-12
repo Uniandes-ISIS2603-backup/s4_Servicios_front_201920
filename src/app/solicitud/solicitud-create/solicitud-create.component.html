@@ -24,7 +24,12 @@
                     <div class="invalid-feedback">
                         <div>The solicitud's estado is missing</div>
                     </div>
-                    
+                    <label for="solicitudFecha"><b>Fecha</b></label>
+                    <input type="datetime-local" name="solicitudFecha" class="form-control" id="solicitudFecha" [(ngModel)]="solcitud.fechaInicio"
+                       #solicitudFecha="ngModel">
+                    <div class="invalid-feedback">
+                    <div>The factura duracion is missing</div>
+                     </div>
                 </div>
                 <div class="row form-inline justify-content-center align-self-center">
                     <button type="submit" class="btn btn-primary">Create</button>

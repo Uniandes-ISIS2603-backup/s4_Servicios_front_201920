@@ -7,7 +7,7 @@ estado: string;
 
 foto: string;
 
-fechaInicio: string;
+fechaInicio: Date;
 
 calificacion: Calificacion;
 
