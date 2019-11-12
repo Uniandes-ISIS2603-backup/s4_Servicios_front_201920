@@ -8,4 +8,5 @@ export class FacturaDetail extends Factura{
 
     primerPago: boolean;
     
+    duracion: number;
 }

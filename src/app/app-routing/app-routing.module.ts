@@ -17,11 +17,11 @@ import { FacturaCreateComponent } from '../factura/factura-create/factura-create
 
 import { SolicitudListComponent } from '../solicitud/solicitud-list/solicitud-list.component';
 import { SolicitudDetailComponent } from '../solicitud/solicitud-detail/solicitud-detail.component';
-
+import { SolicitudCreateComponent } from '../solicitud/solicitud-create/solicitud-create.component';
 
 import { TrabajadorListaComponent } from "../trabajador/trabajador-lista/trabajador-lista.component";
 import { TrabajadorDetailComponent } from "../trabajador/trabajador-detail/trabajador-detail.component";
-
+import { TrabajadorCreateComponent } from "../trabajador/trabajador-create/trabajador-create.component"
 const routes: Routes = [
    
 
@@ -68,7 +68,11 @@ const routes: Routes = [
       path: ':id',
       component: SolicitudDetailComponent,
       outlet: 'detail'
-      }
+      },
+      {
+        path:'add',
+        component: SolicitudCreateComponent,
+    }
       ]
     },
     {
@@ -112,7 +116,11 @@ const routes: Routes = [
         path: ":id",
         component: TrabajadorDetailComponent,
         outlet: "detail"
-      }
+      },
+      {
+        path:'add',
+        component: TrabajadorCreateComponent,
+    }
     ]
   }, 
    {
@@ -124,9 +132,10 @@ const routes: Routes = [
         {
           path: ':id',
           component: FacturaDetailComponent,
+          outlet: "detail"
         },
         {
-          path: 'create',
+          path: 'add',
           component: FacturaCreateComponent,
         }
         ]

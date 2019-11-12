@@ -1,4 +1,4 @@
-import { Component, OnInit} from "@angular/core";
+import { Component, OnInit,  Output, EventEmitter} from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { FacturaService } from '../factura.service';
 import { Factura } from '../factura';
@@ -18,21 +18,26 @@ export class FacturaCreateComponent implements OnInit{
     private facturaService: FacturaService,
     private toastrService: ToastrService,
     private formBuilder: FormBuilder,
-    private router: Router
+
   ) {}
 
   factura : FacturaDetail;
 
+  @Output() cancel = new EventEmitter();
+
+  @Output() create = new EventEmitter();
+
   cancelCreation(): void {
     this.toastrService.warning('The factura wasn\'t created', 'Factura creation');
-    this.router.navigate(['/facturas/list']);
+    this.cancel.emit();
   }
 
   createFactura():FacturaDetail{
     this.facturaService.createFactura(this.factura)
-    .subscribe(serv => {
-        this.factura.id = serv.id;
-        this.router.navigate(['/factura/' + serv.id]);
+    .subscribe(factura => {
+        this.factura= factura;
+       this.create.emit();
+       this.toastrService.success("The Factura was created", "Factura creation");
     }, err => {
         this.toastrService.error(err, 'Error');
     });

@@ -1,8 +1,9 @@
-<form name="factura" (ngSubmit)="createFactura()" #f="ngForm" novalidate>
+
+<form name="factura" (ngSubmit)="f.form.valid && createFactura()" #f="ngForm" novalidate>
     <div class="form-group">
         <label for="facturaId"><b>#ID de la factura</b></label>
-        <input type="number" name="solicitudId" class="form-control" id="facturaId" [(ngModel)]="factura.id"
-            #solicitudId="ngModel">
+        <input type="number" name="facturaId" class="form-control" id="facturaId" [(ngModel)]="factura.id"
+            #facturaId="ngModel">
         <div class="invalid-feedback">
             <div>The factura id is missing</div>
         </div>
@@ -31,4 +32,3 @@
         <button type="button" class="btn btn-danger" (click)="cancelCreation()" href="#">Cancelar</button>
     </div>
 </form>
-<router-outlet></router-outlet>
