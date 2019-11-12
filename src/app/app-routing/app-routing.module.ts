@@ -119,7 +119,7 @@ const routes: Routes = [
         path: 'facturas',
         children:[{
           path: 'list',
-          component: FacturaListComponent
+          component: FacturaListComponent,
         },
         {
           path: ':id',
@@ -128,7 +128,6 @@ const routes: Routes = [
         {
           path: 'create',
           component: FacturaCreateComponent,
-          outlet:'create'
         }
         ]
     }

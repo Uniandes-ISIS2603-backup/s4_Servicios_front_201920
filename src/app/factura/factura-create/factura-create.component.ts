@@ -41,5 +41,6 @@ export class FacturaCreateComponent implements OnInit{
   
   ngOnInit() {
     this.factura = new FacturaDetail();
+    this.factura.primerPago = true;
   }
 }

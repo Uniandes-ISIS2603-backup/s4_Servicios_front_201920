@@ -44,8 +44,22 @@ export class FacturaDetailComponent implements OnInit {
     this.loader.unsubscribe();
   }
 
-  crearPrueba():void{
+  primerPago():string{
+    if(this.facturaDetail.primerPago == false){
+      return 'No';
+    }
+    else{
+      return 'Si';
+    }
+  }
 
+  pagada():string{
+    if(this.facturaDetail.pagada == false){
+      return 'No';
+    }
+    else{
+      return 'Si';
+    }
   }
 
 }
