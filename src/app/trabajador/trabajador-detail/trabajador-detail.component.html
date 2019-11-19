@@ -1,12 +1,12 @@
 <div class="container-fluid">
   <p class="h3">
-		Nombre: {{adminDetail.name}}
+		Nombre: {{trabajadorDetail.nombre}}
 	</p>
   <p class="h3">
-		Descripcion: 
+		Correo: 
 	</p>
   <p>
-		{{adminDetail.text}} 
+		{{trabajadorDetail.correo}} 
 	</p>
   <p class="h3">
 		Servicios ofrecidos: 
@@ -21,11 +21,10 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr *ngFor="let movie of adminDetail.movies">
-          <th>{{movie.id}}</th>
-          <td>{{movie.name}}</td>
-          <td>{{movie.year}}</td>
-				</tr>
+				<tr *ngFor="let servicio of trabajadorDetail.servicios">
+          <th>{{servicio.id}}</th>
+		  <td>{{servicio.nombre}}</td>
+						</tr>
 			</tbody>
 		</table>
 	</div>

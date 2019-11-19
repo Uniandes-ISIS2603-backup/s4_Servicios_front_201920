@@ -1,7 +1,8 @@
 import {Trabajador} from "./trabajador";
-import {Movie} from "../movie/movie";
+import { ServicioOfrecido } from "../servicio-ofrecido/servicio-ofrecido";
+import { Solicitud } from "../solicitud/solicitud";
 
 export class TrabajadorDetail extends Trabajador{
-  text: string;
-  movies: Movie[];
+  servicios: ServicioOfrecido[];
+  solicitudes: Solicitud[];
 }
