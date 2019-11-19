@@ -1,14 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+import { catchError, map, tap } from "rxjs/operators";
+
 import { Cliente } from './cliente'; 
 import { ClienteDetail } from './cliente-detail';
 
-const API_URL = "../../assets/";
-const clientes = 'clientes.json';
+const API_URL =  environment.apiURL;
+const clientes = '/clientes';
 
 @Injectable()
 export class ClienteService {
+
+  httpOptions = {
+    headers: new HttpHeaders({ "Content-Type": "application/json" })
+  };
 
   constructor(private http : HttpClient) {}
 
@@ -17,6 +24,10 @@ export class ClienteService {
   }
 
   getClienteDetail(clienteId): Observable<ClienteDetail> {
-    return this.http.get<ClienteDetail>(API_URL + "cliente" + clienteId + ".json");
+    return this.http.get<ClienteDetail>(API_URL + clientes + '/' + clienteId);
+  }
+
+  createCliente(cliente: Cliente): Observable<Cliente> {
+    return this.http.post<Cliente>(API_URL + clientes, cliente, this.httpOptions).pipe(tap((cliente: Cliente) => console.log(`added cliente w/ ${cliente.nombre} id=${cliente.id}`)));
   }
 }

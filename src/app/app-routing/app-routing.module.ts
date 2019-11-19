@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import {NgxPermissionsGuard} from 'ngx-permissions';
+
 import {ClienteListComponent} from '../cliente/cliente-list/cliente-list.component';
 import {ClienteDetailComponent} from '../cliente/cliente-detail/cliente-detail.component';
+import { ClienteCreateComponent } from "../cliente/cliente-create/cliente-create.component"
 
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
@@ -101,7 +103,12 @@ const routes: Routes = [
       },
       { 
         path: ':id',
-        component: ClienteDetailComponent
+        component: ClienteDetailComponent,
+        outlet: "detail"
+      },
+      {
+        path:'add',
+        component: ClienteCreateComponent
       }
     ]
   },
@@ -120,7 +127,7 @@ const routes: Routes = [
       {
         path:'add',
         component: TrabajadorCreateComponent,
-    }
+      }
     ]
   }, 
    {

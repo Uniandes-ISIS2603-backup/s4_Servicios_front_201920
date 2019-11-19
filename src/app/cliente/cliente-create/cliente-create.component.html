@@ -1,0 +1,56 @@
+<div><h2>
+    Crear Cliente
+    </h2></div>
+    <form name="cliente" (ngSubmit)="f.form.valid && createCliente()" #f="ngForm" novalidate>
+        <div class="form-group">
+            <label for="clienteId"><b>Id</b></label>
+            <input type="number" name="clienteId" class="form-control" id="clienteId" [(ngModel)]="cliente.id"
+                #clienteId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteId.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The cliente's id is missing</div>
+            </div>
+            <label for="clienteNombre"><b>Nombre</b></label>
+            <input type="text" name="clienteNombre" class="form-control" id="clienteNombre" [(ngModel)]="cliente.nombre"
+                #clienteNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteNombre.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The cliente's nombre is missing</div>
+            </div>
+            <label for="clienteUsuario"><b>Usuario</b></label>
+            <input type="text" name="clienteUsuario" class="form-control" id="clienteUsuario" [(ngModel)]="cliente.usuario"
+                #clienteUsuario="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteUsuario.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The cliente's usuario is missing</div>
+            </div>
+            <label for="clienteContrasena"><b>Password</b></label>
+            <input type="password" name="clienteContrasena" class="form-control" id="clienteContrasena" [(ngModel)]="cliente.contrasena"
+                #clienteContrasena="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteContrasena.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The cliente's password is missing</div>
+            </div>
+            <label for="clienteTelefono"><b>Telefono</b></label>
+            <input type="number" name="clienteTelefono" class="form-control" id="clienteTelefono" [(ngModel)]="cliente.telefono"
+                #clienteTelefono="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteTelefono.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The cliente's telefono is missing</div>
+            </div>
+            <label for="clienteCorreo"><b>Correo</b></label>
+            <input type="text" name="clienteCorreo" class="form-control" id="clienteCorreo" [(ngModel)]="cliente.mail"
+                #clienteCorreo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteCorreo.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The cliente's correo is missing</div>
+            </div>
+            <label for="clienteDireccion"><b>Direccion</b></label>
+            <input type="text" name="clienteDireccion" class="form-control" id="clienteDireccion" [(ngModel)]="cliente.direccion"
+                #clienteDireccion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteDireccion.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The cliente's direccion is missing</div>
+            </div>
+            
+        </div>
+        <div class="row form-inline justify-content-center align-self-center">
+            <button type="submit" class="btn btn-primary">Create</button>
+            <div class="divider"></div>
+            <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
+        </div>
+    </form>
+    

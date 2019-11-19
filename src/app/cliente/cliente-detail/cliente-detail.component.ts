@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { ClienteService } from '../cliente.service';
 import { Cliente } from '../cliente';
 import { ClienteDetail } from '../cliente-detail';
@@ -11,22 +11,35 @@ import { ClienteDetail } from '../cliente-detail';
 })
 export class ClienteDetailComponent implements OnInit {
 
-  clienteDetail : ClienteDetail;
-  clienteId : number;
-
+ 
   constructor(
     private clienteService : ClienteService,
     private route : ActivatedRoute
   ) { }
 
-  getClienteDetail(): void {
-    this.clienteService.getClienteDetail(this.clienteId).subscribe(objetoClienteDetail => {this.clienteDetail = objetoClienteDetail});
-  }
+  clienteDetail : ClienteDetail;
 
-  ngOnInit() {
-    this.clienteId = +this.route.snapshot.paramMap.get('id');
-    this.clienteDetail = new ClienteDetail();
-    this.getClienteDetail();
-  }
+  @Input() clienteId : number;
+
+  loader: any;
+
+  getClienteDetail(): void{
+  this.clienteService.getClienteDetail(this.clienteId)
+  .subscribe( o => {
+     this.clienteDetail = o
+  });
+}
+
+onLoad(params) {
+
+  this.clienteId = parseInt(params['id']);
+  console.log(" en detail " + this.clienteId);
+  this.clienteDetail = new ClienteDetail();
+  this.getClienteDetail();
+}
+
+ngOnInit() {
+  this.loader = this.route.params.subscribe((params: Params) => this.onLoad(params));
+ }
 
 }
