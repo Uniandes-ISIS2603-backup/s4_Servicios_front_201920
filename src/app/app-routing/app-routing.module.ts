@@ -67,13 +67,13 @@ const routes: Routes = [
       component: SolicitudListComponent 
       },
       {
-      path: ':id',
-      component: SolicitudDetailComponent,
-      outlet: 'detail'
+        path: ':id',
+        component: SolicitudDetailComponent,
+        runGuardsAndResolvers: 'always'
       },
       {
         path:'add',
-        component: SolicitudCreateComponent,
+        component: SolicitudCreateComponent
     }
       ]
     },

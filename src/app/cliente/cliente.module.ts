@@ -8,13 +8,15 @@ import { ClienteService } from './cliente.service';
 import { ClienteDetailComponent } from './cliente-detail/cliente-detail.component';
 import { ClienteCreateComponent } from './cliente-create/cliente-create.component';
 import{ AppRoutingModule } from '../app-routing/app-routing.module';
+import { SolicitudModule } from '../solicitud/solicitud.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SolicitudModule
   ],
   declarations: [ClienteListComponent, ClienteDetailComponent, ClienteCreateComponent],
   exports : [ClienteListComponent, ClienteCreateComponent],

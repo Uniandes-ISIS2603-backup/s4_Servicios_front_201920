@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import 'rxjs/add/operator/filter';
+
 import { Solicitud } from '../solicitud';
 import { SolicitudService } from '../solicitud.service';
 
@@ -16,12 +19,12 @@ export class SolicitudListComponent implements OnInit {
      * Constructor for the component
      * @param editorialService The author's services provider
      */
-    constructor(private solicitudService: SolicitudService) { }
+    constructor(private solicitudService: SolicitudService, private route: ActivatedRoute) { }
     
     /**
      * The list of editorials which belong to the BookStore
      */
-    solicitudes: Solicitud[];
+    @Input() solicitudes: Solicitud[];
 
     /**
      * Asks the service to update the list of editorials

@@ -27,8 +27,8 @@ export class TrabajadorService {
     return this.http.get<TrabajadorDetail>(API_URL + admins + '/' + adminId);
   }
 
-  createTrabajador(admin: Trabajador): Observable<Trabajador> {
-    return this.http.post<Trabajador>(API_URL + admins, admin, this.httpOptions).pipe(tap((admin: Trabajador) => console.log(`added trabajador w/ ${admin.nombre} id=${admin.id}`)));
+  createTrabajador(admin: Trabajador): Observable<TrabajadorDetail> {
+    return this.http.post<TrabajadorDetail>(API_URL + admins, admin);
   }
 
 }

@@ -3,12 +3,6 @@
     </h2></div>
     <form name="trabajador" (ngSubmit)="f.form.valid && createTrabajador()" #f="ngForm" novalidate>
         <div class="form-group">
-            <label for="adminId"><b>Id</b></label>
-            <input type="number" name="adminId" class="form-control" id="adminId" [(ngModel)]="trabajador.id"
-                #adminId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminId.invalid }" required>
-            <div class="invalid-feedback">
-                <div>The trabajador's id is missing</div>
-            </div>
             <label for="adminNombre"><b>Nombre</b></label>
             <input type="text" name="adminNombre" class="form-control" id="adminNombre" [(ngModel)]="trabajador.nombre"
                 #adminNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminNombre.invalid }" required>
@@ -45,23 +39,11 @@
             <div class="invalid-feedback">
                 <div>The trabajador's foto is missing</div>
             </div>
-            <label for="adminDisponibilidad"><b>Disponibilidad</b></label>
-            <input type="text" name="adminDisponibilidad" class="form-control" id="adminDisponibilidad" [(ngModel)]="trabajador.disponibilidad"
-                #adminDisponibilidad="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminDisponibilidad.invalid }" required>
-            <div class="invalid-feedback">
-                <div>The trabajador's disponibilidad is missing</div>
-            </div>
             <label for="adminHojaDeVida"><b>Hoja de Vida</b></label>
             <input type="text" name="adminHojaDeVida" class="form-control" id="adminHojaDeVida" [(ngModel)]="trabajador.hojaVida"
                 #adminHojaDeVida="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminHojaDeVida.invalid }" required>
             <div class="invalid-feedback">
                 <div>The trabajador's hoja de vida is missing</div>
-            </div>
-            <label for="adminEsApto"><b>Es apto?</b></label>
-            <input type="text" name="adminEsApto" class="form-control" id="adminEsApto" [(ngModel)]="trabajador.esApto"
-                #adminEsApto="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminEsApto.invalid }" required>
-            <div class="invalid-feedback">
-                <div>The trabajador's aptitud is missing</div>
             </div>
             <label for="adminSeguroSocial"><b>Seguro Social</b></label>
             <input type="text" name="adminSeguroSocial" class="form-control" id="adminSeguroSocial" [(ngModel)]="trabajador.seguroSocial"

@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import {ToastrService} from 'ngx-toastr';
+import {Router} from '@angular/router';
 
 import { Cliente } from "../cliente";
 import { ClienteService } from "../cliente.service";
@@ -19,31 +20,26 @@ export class ClienteCreateComponent{
 
     constructor(
         private clienteService: ClienteService,
-        private toastrService: ToastrService
-    ){
-    }
-
-    @Output() cancel = new EventEmitter();
-
-    @Output() create = new EventEmitter();
-
+        private toastrService: ToastrService,
+        private router: Router
+    ){}
 
     createCliente(): Cliente {
         // Process checkout data here
     
         this.clienteService.createCliente(this.cliente)
             .subscribe((cliente) => {
-                 this.cliente = cliente;
-                 this.create.emit();
-                 this.toastrService.success("The Cliente was created", "Cliente creation");
-            }, err => {
+                 this.cliente.id = cliente.id;
+                 this.router.navigate(['/cliente/' + cliente.id]);
+                }, err => {
                 this.toastrService.error(err, "Error");
             });
         return this.cliente;
       }
 
       cancelCreation(): void{
-          this.cancel.emit();
+          this.toastrService.warning('The cliente wasn\'t created', 'Cliente creation');
+        this.router.navigate(['/clientes/list']);
       }
 
       ngOnInit() {

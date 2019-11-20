@@ -12,7 +12,7 @@
 					<li>Telefono: {{trabajador.telefono}}</li>
 					<li>Correo: {{trabajador.correo}}</li>
 				</ul>
-				<a class="btn btn-primary" [routerLink] ="['/trabajadores', { outlets: { 'detail': [trabajador.id] } }]">Ver perfil</a>
+				<a class="btn btn-primary" routerLink ="/trabajadores/{{trabajador.id } }">Ver perfil</a>
 			</div>
 		</div>
 	</div>
