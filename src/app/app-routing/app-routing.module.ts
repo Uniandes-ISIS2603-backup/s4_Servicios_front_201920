@@ -126,7 +126,7 @@ const routes: Routes = [
       },
       {
         path:'add',
-        component: TrabajadorCreateComponent,
+        component: TrabajadorCreateComponent
       }
     ]
   }, 
