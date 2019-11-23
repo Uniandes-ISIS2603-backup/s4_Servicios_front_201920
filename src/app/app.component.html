@@ -1,10 +1,10 @@
 
 <app-header></app-header>
 <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
 </head>
 
-<div class="container-fluid">
+<div class="container-fluid" >
 		<div class="col">
 			<router-outlet></router-outlet>
 		</div>
@@ -61,25 +61,8 @@
 
 
 
-	  <div class="container-fluid">
-			<div class="table-responsive">
-			  <table class="table table-striped">
-				<thead class="thead-dark">
-				  <tr>
-					<th>Cuentasnos que necesitas</th>
-				  </tr>
-				</thead>
-				<tbody>
-					<tr *ngFor = "let e of servicios">
-					  <td style="cursor: pointer;">
-								  <a class="figure-caption" [routerLink] ="['/serviciosOfrecidos', { outlets: { 'detail': [e.id] } }]" >{{e.nombre}}</a>
-							  </td>     
-				  </tr>
-				</tbody>
-			   
-			  </table>
-			</div>
-
-
-
-
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #ccf9ff!important;">
+		<a class="navbar-brand" href="#">
+			Cuentanos que necesitas</a>
+		</nav>
+			
