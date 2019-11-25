@@ -6,6 +6,15 @@ div.azul {
     background-color: rgb(173, 230, 222);
    }
 
+
+div.subazul {
+    background-color: rgb(184, 233, 255);
+   }
+
+div.blancogay {
+    background-color: rgb(172, 249, 255);
+   }
+
    chat{box-sizing: border-box;}
 
    /* Button used to open the chat form - fixed at the bottom of the page */

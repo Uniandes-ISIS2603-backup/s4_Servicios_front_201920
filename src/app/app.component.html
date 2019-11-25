@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
 </head>
 
-<div class="container-fluid" >
+<div class="container-fluid azul" >
 		<div class="col">
 			<router-outlet></router-outlet>
 		</div>
@@ -73,7 +73,7 @@
 			
 		<div class="bd-example azul">
 
-				<div id="myCarousel" class="carousel slide" data-interval="2000" 
+				<div id="myCarousel" class="carousel slide" data-interval="100000" 
 				data-ride="carousel" data-pause="hover" data-warp="true">
 			  <ol class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -84,15 +84,15 @@
 					<div class="row">
 						<div class="col-sm-3">
 							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDqhiq__DXasx1BAdN1Wr9g90be-O5SPaVbGm6krYYEZa8uL7f&s"  height="300"   class="d-block w-100 rounded-circle" alt="...">
-								<div class="carousel-caption d-none d-md-block" >
+								<div class="btn btn-block rounded-0" style="display:block;margin-top:-20%;margin-bottom:0%" data-toggle="collapse" href="#pintura" role="button" aria-expanded="false" aria-controls="pintura" >
 									<font color="blue" face = "Comic sans MS" >
-										<h3>Pintura!</h3>
+										<h1>Pintura!</h1>
 									</font>
 								</div>
 							</div>
 							<div class="col-sm-3">
 								<img src="https://image.freepik.com/vector-gratis/plomero-conjunto-herramientas_24877-330.jpg"   height="300"   class="d-block w-100 rounded-circle" alt="...">
-									<div class="carousel-caption d-none d-md-block">
+									<div class="carousel-caption d-none d-md-block" data-toggle="collapse" href="#plomeria" role="button" aria-expanded="false" aria-controls="plomeria">
 										<font color="blue" face = "Comic sans MS" >
 												<h3>Plomería!</h3>
 											</font>
@@ -100,7 +100,7 @@
 								</div>
 								<div class="col-sm-3">
 												<img src="data:image/png;base64,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"    height="300"   class="d-block w-100 rounded-circle" alt="...">
-										<div class="carousel-caption d-none d-md-block">
+										<div class="carousel-caption d-none d-md-block" data-toggle="collapse" href="#electricidad" role="button" aria-expanded="false" aria-controls="electricidad">
 											<font color="blue" face = "Comic sans MS">
 													<h3>Electricidad!</h3>
 												</font>
@@ -108,7 +108,7 @@
 									</div>
 									<div class="col-sm-3">
 											<img src="https://cerrajerosurgentes.barcelona/images/icono-cerrajeros-barcelona.png"  height="300"   class="d-block w-100 rounded-circle" alt="...">
-											<div class="carousel-caption d-none d-md-block">
+											<div class="carousel-caption d-none d-md-block" data-toggle="collapse" href="#cerrajeria" role="button" aria-expanded="false" aria-controls="cerrajeria">
 												<font color="blue" face = "Comic sans MS">
 														<h3>Cerrajería!</h3>
 													</font>
@@ -121,7 +121,7 @@
 									<div class="row">
 										<div class="col-sm-3">
 												<img src="https://cerrajerosurgentes.barcelona/images/icono-cerrajeros-barcelona.png"   height="300"   class="d-block w-100 rounded-circle" alt="...">
-												<div class="carousel-caption d-none d-md-block">
+												<div class="carousel-caption d-none d-md-block" data-toggle="collapse" href="#cerrajeria" role="button" aria-expanded="false" aria-controls="cerrajeria">
 													<font color="blue" face = "Comic sans MS">
 															<h3>Cerrajería!</h3>
 														</font>
@@ -129,7 +129,7 @@
 											</div>
 											<div class="col-sm-3">
 													<img src="https://rastro.com/images/e58fnup9thk2b1ljv0gii3bqu7_2019012212065215c47318caecaa.jpg"  height="300"   class="d-block w-100 rounded-circle" alt="...">
-													<div class="carousel-caption d-none d-md-block">
+													<div class="carousel-caption d-none d-md-block" data-toggle="collapse" href="#aseo" role="button" aria-expanded="false" aria-controls="aseo">
 															<font color="blue" face = "Comic sans MS">
 																	<h3>Aseo!</h3>
 																</font>
@@ -137,7 +137,7 @@
 												</div>
 												<div class="col-sm-3">
 														<img src="https://st4.depositphotos.com/12362248/19714/v/1600/depositphotos_197148896-stock-illustration-wooden-box-for-carpentry-tools.jpg"  height="300"   class="d-block w-100 rounded-circle" alt="...">
-														<div class="carousel-caption d-none d-md-block">
+														<div class="carousel-caption d-none d-md-block" data-toggle="collapse" href="#carpinteria" role="button" aria-expanded="false" aria-controls="carpinteria">
 															<font color="blue" face = "Comic sans MS">
 																	<h3>Carpintería!</h3>
 															</font>
@@ -145,7 +145,7 @@
 													</div>
 												<div class="col-sm-3">
 														<img src="http://www.velux.es/~/media/marketing/es/cartoon/pictograma%20instalador.png?h=489&la=es-ES&mw=768&w=569"    height="300"   class="d-block w-100 rounded-circle" alt="...">
-														<div class="carousel-caption d-none d-md-block">
+														<div class="carousel-caption d-none d-md-block" data-toggle="collapse" href="#ventaneria" role="button" aria-expanded="false" aria-controls="ventaneria">
 															<font color="blue">
 																	<h3>Ventanería!</h3>
 																</font>
@@ -157,27 +157,263 @@
 									
 										</div>
 						
-										<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-												<span class="sr-only">Previous</span>
-										  </a>
-										  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-												<span class="carousel-control-next-icon" aria-hidden="true"></span>
-											<span class="sr-only">Next</span>
-										</a>
 		
 		  </div>
 		</div>
 	
+		<div class="collapse" id="pintura" >
+			<div class="card-body subazul">
+					<font size="5">
+						La principal ocupación del pintor es la distribución uniforme de pintura por las 
+						superficies a decorar utilizando herramientas tales como brochas o rodillos. 
+						El pintor es contratado por los constructores o dueños de las viviendas para dar 
+						color y protección a sus paredes y techos de acuerdo a sus gustos y al diseño de la 
+						vivienda. 
+					</font>
+			</div>
+			<form>
+					<div class="form-group subazul">
+					  <label for="exampleFormControlInput1">Direccion a solicitar el servicio</label>
+					  <input class="form-control blancogay" id="exampleFormControlInput1" placeholder="Tu direccion aca">
+					</div>
+					<div class="form-group subazul">
+					  <label for="exampleFormControlSelect1">Selecciona tu problema</label>
+					  <select class="form-control blancogay" id="exampleFormControlSelect1">
+						<option>Pintar una pared</option>
+						<option>Pintar techo</option>
+						<option>Arreglar pared</option>
+						<option>Pintar una alcoba</option>
+						<option>Otro...</option>
+					  </select>
+					</div>
+					<div class="form-group subazul">
+					  <label for="exampleFormControlTextarea1">Informacion extra del problema</label>
+					  <textarea class="form-control blancogay" id="exampleFormControlTextarea1" rows="3"></textarea>
+					</div>
+					<button type="button" class="btn btn-success blancogay">Solicitar</button>
+				  </form>
+		</div>
+
+		<div class="collapse" id="plomeria" >
+				<div class="card-body subazul">
+						<font size="5">
+								Encargado de instalaciones de agua potable, agua no potable y la recogida 
+								de aguas pluviales y de aguas residuales en las viviendas, locales comerciales 
+								o industrias y talleres. 
+						</font>
+					</div>
+					<form>
+						<div class="form-group subazul">
+						  <label for="exampleFormControlInput1">Direccion a solicitar el servicio</label>
+						  <input class="form-control blancogay" id="exampleFormControlInput1" placeholder="Tu direccion aca">
+						</div>
+						<div class="form-group subazul">
+						  <label for="exampleFormControlSelect1">Selecciona tu problema</label>
+						  <select class="form-control blancogay" id="exampleFormControlSelect1">
+							<option>Destapar tuberia</option>
+							<option>Instalar tuberia</option>
+							<option>Desmontar tuberia</option>
+							<option>Arreglar tuberia</option>
+							<option>Otro...</option>
+						  </select>
+						</div>
+						<div class="form-group subazul">
+						  <label for="exampleFormControlTextarea1">Informacion extra del problema</label>
+						  <textarea class="form-control blancogay" id="exampleFormControlTextarea1" rows="3"></textarea>
+						</div>
+						<button type="button" class="btn btn-success blancogay">Solicitar</button>
+					  </form>
+			</div>
+
+			<div class="collapse" id="electricidad" >
+					<div class="card-body subazul">
+							<font size="5">
+									Se trata de un profesional que realiza instalaciones y reparaciones relacionadas con la electricidad, 
+									especialmente en máquinas e iluminación (no debe confundirse con liniero, en algunos países 
+									también técnico electricista) . Dentro de esta profesión existen varias especialidades en 
+									virtud del tipo de trabajo que deban realizar, como por ejemplo instalar y mantener redes 
+									de alta tensión, realizar instalaciones eléctricas en residencias o locales comerciales 
+									(incluidas oficinas y talleres), 
+									alumbrado público o la reparación de averías eléctricas de la maquinaria y electrodomésticos. 
+							</font>
+						</div>
+						<form>
+							<div class="form-group subazul">
+							  <label for="exampleFormControlInput1">Direccion a solicitar el servicio</label>
+							  <input class="form-control blancogay" id="exampleFormControlInput1" placeholder="Tu direccion aca">
+							</div>
+							<div class="form-group subazul">
+							  <label for="exampleFormControlSelect1">Selecciona tu problema</label>
+							  <select class="form-control blancogay" id="exampleFormControlSelect1">
+								<option>Desenrredar cables</option>
+								<option>Instalar red electrica</option>
+								<option>Desmontar red electrica</option>
+								<option>Arreglar red electrica</option>
+								<option>Otro...</option>
+							  </select>
+							</div>
+							<div class="form-group subazul">
+							  <label for="exampleFormControlTextarea1">Informacion extra del problema</label>
+							  <textarea class="form-control blancogay" id="exampleFormControlTextarea1" rows="3"></textarea>
+							</div>
+							<button type="button" class="btn btn-success blancogay">Solicitar</button>
+						  </form>
+				</div>
+
+				<div class="collapse" id="cerrajeria" >
+						<div class="card-body subazul">
+								<font size="5">
+										La cerrajería es un oficio dedicado a la reparación y mantenimiento de cerraduras, candados, cerrojos 
+										y cilindros, tanto de puertas comunes como así también de vehículos. Una cerradura es un mecanismo 
+										de metal instalada para impedir que puertas y tapas se puedan abrir sin una llave. Los cerrajeros 
+										pueden trabajar con todos los sistemas de cerraduras y cierres conocidos, aunque la gran variedad 
+										de cerraduras utilizadas 
+										—que aumenta la protección de los bienes y personas protegidos— obliga a cierto grado de especialización.
+								</font>
+							</div>
+							<form>
+								<div class="form-group subazul">
+								  <label for="exampleFormControlInput1">Direccion a solicitar el servicio</label>
+								  <input class="form-control blancogay" id="exampleFormControlInput1" placeholder="Tu direccion aca">
+								</div>
+								<div class="form-group subazul">
+								  <label for="exampleFormControlSelect1">Selecciona tu problema</label>
+								  <select class="form-control blancogay" id="exampleFormControlSelect1">
+									<option>Abrir puerta</option>
+									<option>Instalar chapa</option>
+									<option>Desmontar chapa</option>
+									<option>Arreglar chapa</option>
+									<option>Otro...</option>
+								  </select>
+								</div>
+								<div class="form-group subazul">
+								  <label for="exampleFormControlTextarea1">Informacion extra del problema</label>
+								  <textarea class="form-control blancogay" id="exampleFormControlTextarea1" rows="3"></textarea>
+								</div>
+								<button type="button" class="btn btn-success blancogay">Solicitar</button>
+							  </form>
+					</div>
+
+					<div class="collapse" id="aseo" >
+							<div class="card-body subazul">
+									<font size="5">
+											Un trabajador doméstico o empleado del hogar, 
+											tradicionalmente denominado "criado", "sirviente", "fámulo" 
+											o "mucamo" (con más frecuencia, en femenino -"criada", 
+											"sirvienta", "fámula", "mucama"​ o, más recientemente, 
+											trabajadora doméstica-, pues es una labor que realizan 
+											mayoritariamente mujeres), es la persona que trabaja en 
+											tareas domésticas, a cambio de un salario y no siempre 
+											en las mejores condiciones laborales. En ocasiones vive 
+											en la casa del empleador y recibe el nombre de "interno"
+											o "interna" -en México, sobre todo en las ciudades del norte 
+											del país, se les dice "quedada" o "de planta".
+									</font>
+								</div>
+								<form>
+									<div class="form-group subazul">
+									  <label for="exampleFormControlInput1">Direccion a solicitar el servicio</label>
+									  <input class="form-control blancogay" id="exampleFormControlInput1" placeholder="Tu direccion aca">
+									</div>
+									<div class="form-group subazul">
+									  <label for="exampleFormControlSelect1">Selecciona tu problema</label>
+									  <select class="form-control blancogay" id="exampleFormControlSelect1">
+										<option>Limpieza sala grande</option>
+										<option>Ayuda evento</option>
+										<option>Ayuda loza</option>
+										<option>Pisos</option>
+										<option>Otro...</option>
+									  </select>
+									</div>
+									<div class="form-group subazul">
+									  <label for="exampleFormControlTextarea1">Informacion extra del problema</label>
+									  <textarea class="form-control blancogay" id="exampleFormControlTextarea1" rows="3"></textarea>
+									</div>
+									<button type="button" class="btn btn-success blancogay">Solicitar</button>
+								  </form>
+						</div>
+
+						<div class="collapse" id="carpinteria" >
+								<div class="card-body subazul">
+										<font size="5">
+												La carpintería es el nombre del oficio y del taller o lugar en donde se trabajan 
+												tanto la madera como sus derivados, y a quien lo ejerce se le denomina carpintero. 
+												Su objetivo es cambiar la forma física de la materia prima para crear objetos útiles 
+												al desarrollo humano, como pueden ser muebles para el hogar, marcos para puertas, 
+												molduras, juguetes, escritorios, librerías y otros. 
+										</font>
+									</div>
+									<form>
+										<div class="form-group subazul">
+										  <label for="exampleFormControlInput1">Direccion a solicitar el servicio</label>
+										  <input class="form-control blancogay" id="exampleFormControlInput1" placeholder="Tu direccion aca">
+										</div>
+										<div class="form-group subazul">
+										  <label for="exampleFormControlSelect1">Selecciona tu problema</label>
+										  <select class="form-control blancogay" id="exampleFormControlSelect1">
+											<option>Caballo de madera</option>
+											<option>Reparar madera</option>
+											<option>Cortar madera</option>
+											<option>Hacer en madera</option>
+											<option>Otro...</option>
+										  </select>
+										</div>
+										<div class="form-group subazul">
+										  <label for="exampleFormControlTextarea1">Informacion extra del problema</label>
+										  <textarea class="form-control blancogay" id="exampleFormControlTextarea1" rows="3"></textarea>
+										</div>
+										<button type="button" class="btn btn-success blancogay">Solicitar</button>
+									  </form>
+							</div>
+
+							<div class="collapse" id="ventaneria" >
+									<div class="card-body subazul">
+											<font size="5">
+													Vidriero es la persona cuyo oficio se ocupa de la 
+													reposición de vidrios, composición de vidrieras, 
+													e incluso la fabricación de vidrios y cristales. 
+													Es la base de la artesanía del diseño y construcción 
+													de ventanales de iglesias o esculturas y pequeñas 
+													estatuas de vidrio. En algunos lugares y en el medio 
+													profesional se conocen como oficiales de caña.
+													
+											</font>
+										</div>
+										<form>
+											<div class="form-group subazul">
+											  <label for="exampleFormControlInput1">Direccion a solicitar el servicio</label>
+											  <input class="form-control blancogay" id="exampleFormControlInput1" placeholder="Tu direccion aca">
+											</div>
+											<div class="form-group subazul">
+											  <label for="exampleFormControlSelect1">Selecciona tu problema</label>
+											  <select class="form-control blancogay" id="exampleFormControlSelect1">
+												<option>Hacer en vidrio</option>
+												<option>Hacer ventana</option>
+												<option>Reparar ventana</option>
+												<option>Hacer en ventana</option>
+												<option>Otro...</option>
+											  </select>
+											</div>
+											<div class="form-group subazul">
+											  <label for="exampleFormControlTextarea1">Informacion extra del problema</label>
+											  <textarea class="form-control blancogay" id="exampleFormControlTextarea1" rows="3"></textarea>
+											</div>
+											<button type="button" class="btn btn-success blancogay">Solicitar</button>
+										  </form>
+								</div>
+
+
+
+
 	
-		<div class="chat-popup" id="myForm">
+		<div class="chat-popup azul" id="myForm">
 				<form action="/action_page.php" class="form-container">
 				  <h1>Chat</h1>
 			  
 				  <label for="msg"><b>Message</b></label>
 				  <textarea placeholder="Type message.." name="msg" required></textarea>
 			  
-				  <button type="submit" class="btn">Send</button>
-				  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+				  <button type="submit" class="btn">Enviar</button>
+				  <button type="button" class="btn cancel" onclick="closeForm()">Cerrar</button>
 				</form>
 			  </div> 
