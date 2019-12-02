@@ -86,3 +86,39 @@ div.blancogay {
    .form-container .btn:hover, .open-button:hover {
      opacity: 1;
    } 
+
+   .animated{
+     -webkit-animation-duration: 1s;
+     animation-duration: 1s;
+     -webkit-animation-fill-mode: both ;
+     animation-fill-mode: both;
+   }
+
+   .zoomIn{
+     -webkit-animation-name: zoomIn;
+     animation-name: zoomIn;
+   }
+
+   @-webkit-keyframes zoomIn{
+     0%{
+       opacity: 0;
+       -webkit-transform: scale3d(.3,.3,.3);
+       transform: scale3d(.3,.3,.3);
+     }
+     50%{
+       opacity: 1;
+     }
+    }
+
+    @keyframes zoomIn{
+      0%{
+        opacity: 0;
+        -webkit-transform: scale3d(.3,.3,.3);
+        -ms-transform: scale3d(.3,.3,.3);
+        transform: scale3d(.3,.3,.3);
+      }
+      50%{
+        opacity: 1;
+      }
+     }
+ 
