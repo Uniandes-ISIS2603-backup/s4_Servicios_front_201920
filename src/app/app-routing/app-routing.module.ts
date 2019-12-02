@@ -102,9 +102,9 @@ const routes: Routes = [
         component: ClienteListComponent
       },
       { 
-        path: ':id',
+        path: ':user'+'/:password',
         component: ClienteDetailComponent,
-        outlet: "detail"
+        runGuardsAndResolvers: 'always'
       },
       {
         path:'add',

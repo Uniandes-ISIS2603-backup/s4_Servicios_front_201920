@@ -10,7 +10,7 @@
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                  aria-haspopup="true" aria-expanded="false">Clientes</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-menu azul" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" class="nav-item nav-link"  [routerLink]="['/clientes/list']">Lista de clientes</a>
                   <a class="dropdown-item"class="nav-item nav-link" routerLink="/clientes/add" >Agregar Cliente</a>
               </div>
@@ -18,7 +18,7 @@
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                  aria-haspopup="true" aria-expanded="false">Trabajadores</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-menu azul" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" class="nav-item nav-link"  [routerLink]="['/trabajadores/lista']" >Lista de trabajadores</a>
                   <a class="dropdown-item"class="nav-item nav-link" routerLink="/trabajadores/add" >Agregar Trabajador</a>
               </div>
@@ -26,7 +26,7 @@
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                  aria-haspopup="true" aria-expanded="false">Solicitudes</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-menu azul" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" class="nav-item nav-link"  [routerLink]="['/solicitudes/list']" >Lista de solicitudes</a>
                   <a class="dropdown-item"class="nav-item nav-link" routerLink="/solicitudes/add" >Agregar Solicitud</a>
               </div>
@@ -34,7 +34,7 @@
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                  aria-haspopup="true" aria-expanded="false">Servicios</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-menu azul" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" class="nav-item nav-link"  [routerLink]="['/serviciosOfrecidos/list']" >Lista de Servicios</a>
                   <a class="dropdown-item"class="nav-item nav-link" routerLink="/serviciosOfrecidos/add" >Agregar Servicio</a>
               </div>
@@ -42,14 +42,57 @@
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                  aria-haspopup="true" aria-expanded="false">Facturas</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-menu azul" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" class="nav-item nav-link"  [routerLink]="['/facturas/list']" >Lista de facturas</a>
                   <a class="dropdown-item"class="nav-item nav-link" routerLink="/facturas/add" >Agregar Factura</a>
               </div>
           </li>
-          <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-success my-2 my-sm-0" type="submit" routerLink="/home">LogIn</button>
-              </form>
+          <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Registrarse</a>
+                <div class="dropdown-menu azul" aria-labelledby="navbarDropdown">
+                        <button type="button" class="btn btn-block" data-toggle="modal" data-target="#client" data-whatever="@mdo">Cliente</button>
+                        <button type="button" class="btn btn-block" data-toggle="modal" data-target="#worker" data-whatever="@mdo">Trabajador</button>
+                    </div>
+          </li>
+          <li class="form-inline my-2 my-lg-0">
+                <button type="button" class="btn " data-toggle="modal" data-target="#login" data-whatever="@mdo">Ingresar</button>
+          </li>
       </div>
   </div>
 </nav>
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="padding:35px 50px;">
+                    <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" style="padding:40px 50px;">
+              <form>
+                <div class="form-group">
+                  <label for="usuario" class="col-form-label"><span class="glyphicon glyphicon-user"></span>Usuario:</label>
+                  <input type="text" class="form-control" id="usuario"  placeholder="Ingrese su Usuario">
+                </div>
+                <div class="form-group">
+                  <label for="contraseña" class="col-form-label"><span class="glyphicon glyphicon-eye-open"></span>Contraseña:</label>
+                  <input type="password" class="form-control" id="contrasena" placeholder="Ingrese su Contraseña">
+                </div>
+                <div class= "form-group">
+                  <label for="role"><b>Role</b></label>
+                  <select class="custom-select" name="role" id="role" >
+                      <option [value]="role" >Cliente</option>
+                      <option [value]="role" >Trabajador</option>
+                      <option [value]="role" >Admin</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -19,12 +19,14 @@ export class ClienteDetailComponent implements OnInit {
 
   clienteDetail : ClienteDetail;
 
-  @Input() clienteId : number;
+  @Input() clienteUser : string;
+
+  @Input() clientePassword : string;
 
   loader: any;
 
   getClienteDetail(): void{
-  this.clienteService.getClienteDetail(this.clienteId)
+  this.clienteService.getClienteDetail(this.clienteUser, this.clientePassword)
   .subscribe( o => {
      this.clienteDetail = o
   });
@@ -32,8 +34,9 @@ export class ClienteDetailComponent implements OnInit {
 
 onLoad(params) {
 
-  this.clienteId = parseInt(params['id']);
-  console.log(" en detail " + this.clienteId);
+  this.clienteUser = params['user'];
+  this.clientePassword = params['password'];
+  console.log(" en detail " + this.clienteUser);
   this.clienteDetail = new ClienteDetail();
   this.getClienteDetail();
 }
