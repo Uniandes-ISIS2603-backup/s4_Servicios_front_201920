@@ -9,12 +9,6 @@
             <div class="modal-body" style="padding:40px 50px;">
                 <form name="cliente" (ngSubmit)="f.form.valid && createCliente()" #f="ngForm" novalidate>
                     <div class="form-group">
-                        <label for="clienteId"><b>Id</b></label>
-                        <input type="number" name="clienteId" class="form-control" id="clienteId" [(ngModel)]="cliente.id"
-                            #clienteId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteId.invalid }" required>
-                        <div class="invalid-feedback">
-                            <div>The cliente's id is missing</div>
-                        </div>
                         <label for="clienteNombre"><b>Nombre</b></label>
                         <input type="text" name="clienteNombre" class="form-control" id="clienteNombre" [(ngModel)]="cliente.nombre"
                             #clienteNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteNombre.invalid }" required>
@@ -53,15 +47,11 @@
                         </div>
                         
                     </div>
-                    <div class="row form-inline justify-content-center align-self-center">
-                        <button type="submit" class="btn btn-primary">Create</button>
-                        <div class="divider"></div>
-                        <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
-                    </div>
+                    <button type="submit" class="btn btn-success btn-block" data-dismiss="modal" routerLink="clientes/{{clienteUsuario.value}}/{{clienteContrasena.value}}"> Login</button>
                 </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="cancelCreation()">Close</button>
             </div>
           </div>
         </div>
