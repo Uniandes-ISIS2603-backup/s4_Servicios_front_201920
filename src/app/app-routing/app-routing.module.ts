@@ -24,6 +24,7 @@ import { SolicitudCreateComponent } from '../solicitud/solicitud-create/solicitu
 import { TrabajadorListaComponent } from "../trabajador/trabajador-lista/trabajador-lista.component";
 import { TrabajadorDetailComponent } from "../trabajador/trabajador-detail/trabajador-detail.component";
 import { TrabajadorCreateComponent } from "../trabajador/trabajador-create/trabajador-create.component"
+import { HomeComponent } from '../home/home.component';
 const routes: Routes = [
    
 
@@ -52,14 +53,42 @@ const routes: Routes = [
         }
       ]   
     },
-    {
-      path: 'home',
-      component: AuthLoginComponent
+    { 
+      path : 'clientes',
+      children: [
+        { 
+          path: 'list',
+          component: ClienteListComponent
+        },
+        { 
+          path: ':user'+'/:password',
+          component: ClienteDetailComponent,
+          runGuardsAndResolvers: 'always'
+        },
+        {
+          path:'add',
+          component: ClienteCreateComponent
+        }
+      ]
     },
-    //  {
-    //  path: '**',
-    //  redirectTo: 'home',
-    //  },
+    {
+      path: "trabajadores",
+      children: [
+        {
+          path: "lista",
+          component: TrabajadorListaComponent
+        },
+        {
+          path: ':user'+'/:password',
+          component: TrabajadorDetailComponent,
+          runGuardsAndResolvers: 'always'
+        },
+        {
+          path:'add',
+          component: TrabajadorCreateComponent
+        }
+      ]
+    }, 
     {
     path: 'solicitudes',
     children: [{
@@ -94,42 +123,6 @@ const routes: Routes = [
         }
         ]
     },
-  { 
-    path : 'clientes',
-    children: [
-      { 
-        path: 'list',
-        component: ClienteListComponent
-      },
-      { 
-        path: ':user'+'/:password',
-        component: ClienteDetailComponent,
-        runGuardsAndResolvers: 'always'
-      },
-      {
-        path:'add',
-        component: ClienteCreateComponent
-      }
-    ]
-  },
-  {
-    path: "trabajadores",
-    children: [
-      {
-        path: "lista",
-        component: TrabajadorListaComponent
-      },
-      {
-        path: ':user'+'/:password',
-        component: TrabajadorDetailComponent,
-        runGuardsAndResolvers: 'always'
-      },
-      {
-        path:'add',
-        component: TrabajadorCreateComponent
-      }
-    ]
-  }, 
    {
         path: 'facturas',
         children:[{
@@ -146,7 +139,15 @@ const routes: Routes = [
           component: FacturaCreateComponent,
         }
         ]
-    }
+    },
+    {
+      path: '',
+      component: HomeComponent
+    },
+      {
+      path: '**',
+      redirectTo: '',
+      }
 ];
 @NgModule({
   imports: [
