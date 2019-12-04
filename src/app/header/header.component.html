@@ -56,41 +56,13 @@
                     </div>
           </li>
           <li class="form-inline my-2 my-lg-0">
-                <button type="button" class="btn " data-toggle="modal" data-target="#login" data-whatever="@mdo">Ingresar</button>
+                <button type="button" class="btn " data-toggle="modal" data-target="#login" data-whatever="@mdo" routerLink="auth/login">Login</button>
           </li>
       </div>
   </div>
+  <a class="navbar-brand" href="#">
+      <img  src="../assets/usuario.png" width="70" height="55" class="d-inline-block align-top" alt=""> Usuario</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
 </nav>
-<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header" style="padding:35px 50px;">
-                    <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body" style="padding:40px 50px;">
-              <form>
-                <div class="form-group">
-                  <label for="usuario" class="col-form-label"><span class="glyphicon glyphicon-user"></span>Usuario:</label>
-                  <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Ingrese su Usuario" [(ngModel)]="usuario" >
-                </div>
-                <div class="form-group">
-                  <label for="contraseña" class="col-form-label"><span class="glyphicon glyphicon-eye-open"></span>Contraseña:</label>
-                  <input type="password" name="contrasena" id="contrasena" class="form-control" placeholder="Ingrese su Contraseña" [(ngModel)]="contrasena" >
-                </div>
-                <div class= "form-group">
-                  <label for="role"><b>Role</b></label>
-                  <select class="custom-select" name="role" id="role" [(ngModel)]="role">
-                      <option [value]="role" *ngFor="let role of roles">{{role}}</option>
-                  </select>
-                </div>
-                <button type="submit" class="btn btn-success btn-block" data-dismiss="modal" (click)="loggearse()" > Login</button>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-</div>
