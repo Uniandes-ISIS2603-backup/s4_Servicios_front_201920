@@ -37,6 +37,10 @@ export class ClienteCreateComponent{
         return this.cliente;
       }
 
+      navigate1():void{
+        this.router.navigate(['/cliente/list']);
+      }
+
       cancelCreation(): void{
           this.toastrService.warning('The cliente wasn\'t created', 'Cliente creation');
         this.router.navigate(['/clientes/list']);
