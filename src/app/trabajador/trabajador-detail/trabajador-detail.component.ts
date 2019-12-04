@@ -18,18 +18,21 @@ export class TrabajadorDetailComponent implements OnInit {
 
   trabajadorDetail: TrabajadorDetail;
 
-  @Input() admin_id: number;
+  @Input() user: String;
+
+  @Input() password: String;
 
   loader: any;
 
   getTrabajadorDetail(): void {
-    this.trabajadorService.getTrabajadorDetail(this.admin_id).subscribe(o => {
+    this.trabajadorService.getTrabajadorDetail(this.user, this.password).subscribe(o => {
       this.trabajadorDetail = o;
     });
   }
 
   onLoad(params) {
-    this.admin_id = parseInt(params["id"]);
+    this.user = params['user'];
+    this.password = params['password'];
     this.trabajadorDetail = new TrabajadorDetail();
     this.getTrabajadorDetail();
   }

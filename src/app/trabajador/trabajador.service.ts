@@ -23,8 +23,8 @@ export class TrabajadorService {
     return this.http.get<Trabajador[]>(API_URL + admins);
   }
 
-  getTrabajadorDetail(adminId): Observable<TrabajadorDetail> {
-    return this.http.get<TrabajadorDetail>(API_URL + admins + '/' + adminId);
+  getTrabajadorDetail(usuario, password): Observable<TrabajadorDetail> {
+    return this.http.get<TrabajadorDetail>(API_URL + admins + '/' + usuario + '/' + password);
   }
 
   createTrabajador(admin: Trabajador): Observable<TrabajadorDetail> {

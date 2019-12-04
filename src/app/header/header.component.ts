@@ -28,7 +28,6 @@ export class HeaderComponent implements OnInit {
     else if(this.role == "Trabajador")
     {
       this.role = "trabajadores";
-
     }
     this.router.navigate(['/'+ this.role + '/' + this.usuario + '/' + this.contrasena ])
   }

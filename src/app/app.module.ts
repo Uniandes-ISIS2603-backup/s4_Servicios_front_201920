@@ -22,6 +22,7 @@ import { HelloComponent } from './hello.component';
 import { AuthModule } from './auth/auth.module';
 import { TrabajadorModule } from './trabajador/trabajador.module';
 import {ChartCreateComponent} from './chart/chart-create/chart-create.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports: [
@@ -47,7 +48,7 @@ import {ChartCreateComponent} from './chart/chart-create/chart-create.component'
     NgxPermissionsModule.forRoot(),
     NgbModule
   ],
-  declarations: [ AppComponent, ChartCreateComponent, HelloComponent, HeaderComponent ],
+  declarations: [ AppComponent, ChartCreateComponent, HelloComponent, HeaderComponent, HomeComponent ],
 
   bootstrap:    [ AppComponent ],
   providers: [

@@ -120,7 +120,7 @@ const routes: Routes = [
         component: TrabajadorListaComponent
       },
       {
-        path: ":user'+'/:password",
+        path: ':user'+'/:password',
         component: TrabajadorDetailComponent,
         runGuardsAndResolvers: 'always'
       },
