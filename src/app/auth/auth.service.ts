@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {NgxRolesService, NgxPermissionsService} from 'ngx-permissions'
 import 'rxjs/add/operator/catch';
+import { User } from './user';
 
 /**
  * The service provider for everything related to authentication
@@ -20,14 +21,17 @@ export class AuthService {
     start (): void {
         this.permissionsService.flushPermissions();
         this.roleService.flushRoles();
-        this.permissionsService.loadPermissions(['edit_author_permission', 'delete_author_permission', 'leave_review']);
+        this.permissionsService.loadPermissions(['']);
         const role = localStorage.getItem('role');
         if (!role) {
             this.setGuestRole();
         } else if (role === 'ADMIN') {
             this.setAdministratorRole();
-        } else {
+        } else if(role === 'CLIENT'){
             this.setClientRole();
+        }
+        else{
+            this.setWorkerRole();
         }
     }
 
@@ -38,13 +42,19 @@ export class AuthService {
 
     setClientRole (): void {
         this.roleService.flushRoles();
-        this.roleService.addRole('CLIENT', ['leave_review']);
+        this.roleService.addRole('CLIENT', ['']);
         localStorage.setItem('role', 'CLIENT');
+    }
+
+    setWorkerRole (): void {
+        this.roleService.flushRoles();
+        this.roleService.addRole('WORKER', ['']);
+        localStorage.setItem('role', 'WORKER');
     }
 
     setAdministratorRole (): void {
         this.roleService.flushRoles();
-        this.roleService.addRole('ADMIN', ['edit_author_permission', 'delete_author_permission']);
+        this.roleService.addRole('ADMIN', ['']);
         localStorage.setItem('role', 'ADMIN');
     }
 
@@ -56,13 +66,18 @@ export class AuthService {
      * Logs the user in with the desired role
      * @param role The desired role to set to the user
      */
-    login (role): void {
-        if (role === 'Administrator') {
+    login (user: User): void {
+        let ruta: String = '';
+        if (user.role === 'Administrator') {
             this.setAdministratorRole();
+        } else if(user.role === 'Cliente'){
+            this.setClientRole();
+            ruta='clientes';
         } else {
-            this.setClientRole()
+            this.setWorkerRole()
+            ruta = 'trabajadores';
         }
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/' + ruta + '/' + user.usuario + '/' + user.password);
     }
 
     /**
@@ -72,6 +87,6 @@ export class AuthService {
         this.roleService.flushRoles();
         this.setGuestRole();
         localStorage.removeItem('role');
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('');
     }
 }
