@@ -1,5 +1,5 @@
 <div><h2>
-    Crear Trabajador
+    Registro Trabajador
     </h2></div>
     <form name="trabajador" (ngSubmit)="f.form.valid && createTrabajador()" #f="ngForm" novalidate>
         <div class="form-group">
@@ -33,31 +33,6 @@
             <div class="invalid-feedback">
                 <div>The trabajador's correo is missing</div>
             </div>
-            <label for="adminFoto"><b>Foto</b></label>
-            <input type="text" name="adminFoto" class="form-control" id="adminFoto" [(ngModel)]="trabajador.foto"
-                #adminFoto="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminFoto.invalid }" required>
-            <div class="invalid-feedback">
-                <div>The trabajador's foto is missing</div>
-            </div>
-            <label for="adminHojaDeVida"><b>Hoja de Vida</b></label>
-            <input type="text" name="adminHojaDeVida" class="form-control" id="adminHojaDeVida" [(ngModel)]="trabajador.hojaVida"
-                #adminHojaDeVida="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminHojaDeVida.invalid }" required>
-            <div class="invalid-feedback">
-                <div>The trabajador's hoja de vida is missing</div>
-            </div>
-            <label for="adminSeguroSocial"><b>Seguro Social</b></label>
-            <input type="text" name="adminSeguroSocial" class="form-control" id="adminSeguroSocial" [(ngModel)]="trabajador.seguroSocial"
-                #adminSeguroSocial="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminSeguroSocial.invalid }" required>
-            <div class="invalid-feedback">
-                <div>The trabajador's Seguro Social is missing</div>
-            </div>
-            <label for="adminRiesgos"><b>Riesgos</b></label>
-            <input type="text" name="adminRiesgos" class="form-control" id="adminRiesgos" [(ngModel)]="trabajador.riesgos"
-                #adminRiesgos="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adminRiesgos.invalid }" required>
-            <div class="invalid-feedback">
-                <div>The trabajador's riesgos is missing</div>
-            </div>
-            
         </div>
         <div class="row form-inline justify-content-center align-self-center">
             <button type="submit" class="btn btn-primary">Create</button>

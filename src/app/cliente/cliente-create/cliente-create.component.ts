@@ -30,7 +30,7 @@ export class ClienteCreateComponent{
         this.clienteService.createCliente(this.cliente)
             .subscribe((cliente) => {
                  this.cliente.id = cliente.id;
-                 this.router.navigate(['/cliente/' + cliente.id]);
+                 this.router.navigate(['/clientes/' + cliente.usuario+ '/' + cliente.contrasena]);
                 }, err => {
                 this.toastrService.error(err, "Error");
             });
@@ -43,7 +43,7 @@ export class ClienteCreateComponent{
 
       cancelCreation(): void{
           this.toastrService.warning('The cliente wasn\'t created', 'Cliente creation');
-        this.router.navigate(['/clientes/list']);
+        this.router.navigate(['']);
       }
 
       ngOnInit() {

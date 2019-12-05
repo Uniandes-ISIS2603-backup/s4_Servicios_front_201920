@@ -30,7 +30,7 @@ export class TrabajadorCreateComponent{
         this.trabajadorService.createTrabajador(this.trabajador)
             .subscribe((trabajador) => {
                  this.trabajador.id = trabajador.id;
-                 this.router.navigate(['/trabajadores/' + trabajador.id]);
+                 this.router.navigate(['/trabajadores/' + trabajador.usuario + '/' + trabajador.contrasena]);
                 }, err => {
                 this.toastrService.error(err, "Error");
             });
@@ -39,7 +39,7 @@ export class TrabajadorCreateComponent{
 
       cancelCreation(): void{
         this.toastrService.warning('The trabajador wasn\'t created', 'Trabajador creation');
-        this.router.navigate(['/trabajadores/lista']);
+        this.router.navigate(['']);
           }
 
       ngOnInit() {
