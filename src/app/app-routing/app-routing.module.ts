@@ -25,6 +25,8 @@ import { TrabajadorListaComponent } from "../trabajador/trabajador-lista/trabaja
 import { TrabajadorDetailComponent } from "../trabajador/trabajador-detail/trabajador-detail.component";
 import { TrabajadorCreateComponent } from "../trabajador/trabajador-create/trabajador-create.component"
 import { HomeComponent } from '../home/home.component';
+
+import {ErrorComponent} from '../error/error.component';
 const routes: Routes = [
    
 
@@ -146,7 +148,7 @@ const routes: Routes = [
     },
       {
       path: '**',
-      redirectTo: '',
+      component: ErrorComponent,
       }
 ];
 @NgModule({
