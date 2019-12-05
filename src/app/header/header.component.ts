@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from './usuario';
+import { AuthService } from '../auth/auth.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -9,28 +9,13 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor( private router: Router
+  constructor( private router: Router, private authService: AuthService
     ) { }
 
-  usuario: String;
-
-  contrasena:String;
-
-  roles:String[] = ["Cliente","Trabajador","Admin"];
-
-  role:String;
-
-  loggearse():void{
-    if(this.role == "Cliente")
-    {
-      this.role = "clientes";
-    }
-    else if(this.role == "Trabajador")
-    {
-      this.role = "trabajadores";
-    }
-    this.router.navigate(['/'+ this.role + '/' + this.usuario + '/' + this.contrasena ])
+    logout(): void {
+      this.authService.logout()
   }
+  
 
   ngOnInit() {
   }

@@ -1,0 +1,29 @@
+<div class="container-fluid">
+                <form name="solicitud" (ngSubmit)="f.form.valid && postSolicitud(f)" #f="ngForm" novalidate>
+                        <div class="form-group">
+                            <label for="solicitudId"><b>Id</b></label>
+                            <input type="text" name="solicitudId" class="form-control" id="solicitudId" [(ngModel)]="solicitud.id"
+                                #solicitudId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && solicitudId.invalid }" required>
+                            <div class="invalid-feedback">
+                                <div>The solicitud's id is missing</div>
+                            </div>
+                            <label for="solicitudDescripcion"><b>Descripcion</b></label>
+                            <input type="text" name="solicitudDescripcion" class="form-control" id="solicitudDescripcion" [(ngModel)]="solicitud.descripcion"
+                                #solicitudDescripcion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && solicitudDescripcion.invalid }" required>
+                            <div class="invalid-feedback">
+                                <div>The solicitud's descripcion is missing</div>
+                            </div>
+                            <label for="solicitudEstado"><b>Estado</b></label>
+                            <input type="text" name="solicitudEstado" class="form-control" id="solicitudEstado" [(ngModel)]="solicitud.estado"
+                                #solicitudEstado="ngModel" [ngClass]="{ 'is-invalid': f.submitted && solicitudEstado.invalid }" required>
+                            <div class="invalid-feedback">
+                                <div>The solicitud's estado is missing</div>
+                            </div>
+                        </div>
+                        <div class="row form-inline justify-content-center align-self-center">
+                            <button type="submit" class="btn btn-primary">Create</button>
+                            <div class="divider"></div>
+                            <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
+                        </div>
+                    </form>
+    </div>

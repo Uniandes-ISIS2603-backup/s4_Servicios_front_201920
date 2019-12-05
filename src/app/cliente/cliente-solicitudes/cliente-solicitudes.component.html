@@ -1,0 +1,13 @@
+<h2>Solicitudes</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4" *ngFor = "let s of servicios">
+            <figure class="figure" routerLink="/solicitudes/{{s.id}}" style="cursor: pointer;"> 
+                <div class="img-thumbnail border-0">                        
+                    <img class="img-fluid" src='{{s.foto}}' alt="{{s.descripcion}}" />                                     
+                </div>
+                <figcaption class="title-caption text-center">{{s.descripcion}}</figcaption>
+            </figure>
+        </div>
+    </div>
+</div>

@@ -7,7 +7,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="navbar-nav mr-auto mt-0">
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" *ngxPermissionsOnly="['ADMIN']">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                  aria-haspopup="true" aria-expanded="false">Clientes</a>
               <div class="dropdown-menu azul" aria-labelledby="navbarDropdown">
@@ -15,7 +15,7 @@
                   <a class="dropdown-item"class="nav-item nav-link" routerLink="/clientes/add" >Agregar Cliente</a>
               </div>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" *ngxPermissionsOnly="['ADMIN']">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                  aria-haspopup="true" aria-expanded="false">Trabajadores</a>
               <div class="dropdown-menu azul" aria-labelledby="navbarDropdown">
@@ -23,7 +23,7 @@
                   <a class="dropdown-item"class="nav-item nav-link" routerLink="/trabajadores/add" >Agregar Trabajador</a>
               </div>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" *ngxPermissionsOnly="['ADMIN']">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                  aria-haspopup="true" aria-expanded="false">Solicitudes</a>
               <div class="dropdown-menu azul" aria-labelledby="navbarDropdown">
@@ -31,7 +31,7 @@
                   <a class="dropdown-item"class="nav-item nav-link" routerLink="/solicitudes/add" >Agregar Solicitud</a>
               </div>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" *ngxPermissionsOnly="['ADMIN']">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                  aria-haspopup="true" aria-expanded="false">Servicios</a>
               <div class="dropdown-menu azul" aria-labelledby="navbarDropdown">
@@ -39,7 +39,7 @@
                   <a class="dropdown-item"class="nav-item nav-link" routerLink="/serviciosOfrecidos/add" >Agregar Servicio</a>
               </div>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" *ngxPermissionsOnly="['ADMIN']">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                  aria-haspopup="true" aria-expanded="false">Facturas</a>
               <div class="dropdown-menu azul" aria-labelledby="navbarDropdown">
@@ -47,7 +47,7 @@
                   <a class="dropdown-item"class="nav-item nav-link" routerLink="/facturas/add" >Agregar Factura</a>
               </div>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" *ngxPermissionsOnly="['GUEST']">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">Registrarse</a>
                 <div class="dropdown-menu azul" aria-labelledby="navbarDropdown">
@@ -55,8 +55,11 @@
                         <button type="button" class="btn btn-block" data-toggle="modal" data-target="#worker" data-whatever="@mdo">Trabajador</button>
                     </div>
           </li>
-          <li class="form-inline my-2 my-lg-0">
+          <li class="form-inline my-2 my-lg-0" *ngxPermissionsOnly="['GUEST']">
                 <button type="button" class="btn " data-toggle="modal" data-target="#login" data-whatever="@mdo" routerLink="auth/login">Login</button>
+          </li>
+          <li class="form-inline my-2 my-lg-0" *ngxPermissionsOnly="['CLIENT', 'ADMIN', 'WORKER']">
+                <button type="button" class="btn " (click)="logout()" >Logout</button>
           </li>
       </div>
   </div>

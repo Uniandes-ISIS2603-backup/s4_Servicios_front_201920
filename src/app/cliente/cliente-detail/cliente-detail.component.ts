@@ -1,8 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { ClienteService } from '../cliente.service';
 import { Cliente } from '../cliente';
 import { ClienteDetail } from '../cliente-detail';
+import { ClienteSolicitudesComponent } from '../cliente-solicitudes/cliente-solicitudes.component';
 
 @Component({
   selector: 'app-cliente-detail',
@@ -23,7 +24,21 @@ export class ClienteDetailComponent implements OnInit {
 
   @Input() clientePassword : string;
 
+  @ViewChild(ClienteSolicitudesComponent) solicitudListComponent: ClienteSolicitudesComponent;
+
+
   loader: any;
+
+  toggleSolicitudes(): void {
+    
+    this.solicitudListComponent.isCollapsed = !this.solicitudListComponent.isCollapsed;
+}
+
+updateSolicitudes(): void {
+  this.getClienteDetail();
+  this.solicitudListComponent.updateSolicitudes(this.clienteDetail.servicios);
+  this.solicitudListComponent.isCollapsed = false;
+}
 
   getClienteDetail(): void{
   this.clienteService.getClienteDetail(this.clienteUser, this.clientePassword)
