@@ -6,8 +6,11 @@
                                         <div class="input-group-prepend">
                                           <span class="input-group-text"> Descripcion</span>
                                         </div>
-                                        <textarea class="form-control" aria-label="With textarea" placeholder="Tu descripcion aca"></textarea>
-                                      </div>
+                                        <input type="text" name="descripcion" class="form-control" id="descripcion" [(ngModel)]="solicitud.descripcion"
+                                        #descripcion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && descripcion.invalid }" required>
+                                    <div class="invalid-feedback">
+                                        <div>The solicitud's descripcion is missing</div>
+                                    </div>                                      </div>
                                       
                         </div>
                         <div class="row form-inline justify-content-center align-self-center">

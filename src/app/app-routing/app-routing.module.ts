@@ -96,14 +96,15 @@ const routes: Routes = [
       component: SolicitudListComponent 
       },
       {
+        path:'add',
+        component: SolicitudCreateComponent
+    },
+      {
         path: ':id',
         component: SolicitudDetailComponent,
         runGuardsAndResolvers: 'always'
-      },
-      {
-        path:'add',
-        component: SolicitudCreateComponent
-    }
+      }
+     
       ]
     },
     {

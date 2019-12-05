@@ -48,7 +48,9 @@ export class ClienteAddSolicitudComponent implements OnInit, OnChanges {
     postSolicitud(f: NgForm): SolicitudDetail {
         this.solicitud.fechaInicio = "2019-11-11T00:00:00Z[UTC]";
         this.solicitud.cliente = this.cliente;
-        this.clienteService.createSolicitud(this.cliente.id,this.solicitud)
+        this.solicitud.estado = "Validacion";
+        this.solicitud.foto = "https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/5617762441552644403-256.png";
+        this.clienteService.createSolicitud(this.solicitud)
             .subscribe(() => {
                 f.resetForm();
                 this.updateSolicitudes.emit();

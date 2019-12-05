@@ -6,7 +6,7 @@ import { catchError, map, tap } from "rxjs/operators";
 
 import { Cliente } from './cliente'; 
 import { ClienteDetail } from './cliente-detail';
-import { SolicitudDetail } from '../solicitud/solicitud-detail';
+import { SolicitudDetail } from './solicitud-detail';
 
 const API_URL =  environment.apiURL;
 const clientes = '/clientes';
@@ -33,7 +33,7 @@ export class ClienteService {
   }
 
    
-   createSolicitud(clienteId, solicitud): Observable<SolicitudDetail> {
-    return this.http.post<SolicitudDetail>(API_URL + clientes + '/' + clienteId + '/solicitudes', solicitud);
-}
+  createSolicitud(solicitud: SolicitudDetail): Observable<SolicitudDetail> {
+    return this.http.post<SolicitudDetail>(API_URL + '/solicitudes', solicitud, this.httpOptions).pipe(tap((solicitud: SolicitudDetail) => console.log(`added solicitud w/ ${solicitud.descripcion}`)));
+  }
 }
