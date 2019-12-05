@@ -9,12 +9,13 @@ import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { ToastrService } from 'ngx-toastr';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Injectable()
 export class HttpErrorInterceptor  extends HttpErrorResponse {
     
-    constructor (private toastrService: ToastrService){ super (toastrService) }
+    constructor (private toastrService: ToastrService, private router: Router){ super (toastrService) }
     
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         return next.handle(request)
@@ -24,7 +25,8 @@ export class HttpErrorInterceptor  extends HttpErrorResponse {
                     let errorType : string = 'Error';
                     // Client Side Error
                     if (error.error instanceof ErrorEvent) {
-                        errMsg = `Error: ${error.error.message}`;                     
+                        errMsg = `Error: ${error.error.message}`;    
+
                     }
                     else {  // Server Side Error                       
                         if (error.status == 0) {
@@ -36,7 +38,7 @@ export class HttpErrorInterceptor  extends HttpErrorResponse {
                         }                      
                         this.toastrService.error(errMsg, errorType, {closeButton: true});
                     }
-                    
+                    this.router.navigate(['/lkfas']);
                     console.log(errMsg);
                     return throwError(errMsg);
                 })
