@@ -1,10 +1,10 @@
-<h2>Solicitudes</h2>
+<h2>Solicitudes <span class="badge badge-secondary">Nuevas</span></h2>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-4" *ngFor = "let s of servicios">
+        <div class="col-md-6" *ngFor = "let s of servicios">
             <figure class="figure" routerLink="/solicitudes/{{s.id}}" style="cursor: pointer;"> 
                 <div class="img-thumbnail border-0">                        
-                    <img class="img-fluid" src='{{s.foto}}' alt="{{s.descripcion}}" />                                     
+                    <img class="img-fluid" src='{{s.foto}}' width="10000" height="10000" alt="{{s.descripcion}}" />                                     
                 </div>
                 <figcaption class="title-caption text-center">{{s.descripcion}}</figcaption>
             </figure>
