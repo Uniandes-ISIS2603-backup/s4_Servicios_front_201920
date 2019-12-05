@@ -1,13 +1,30 @@
 <div class="container-fluid">
-  <p class="h3">
-		Nombre: {{trabajadorDetail.nombre}}
-	</p>
-  <p class="h3">
-		Correo: 
-	</p>
-  <p>
-		{{trabajadorDetail.correo}} 
-	</p>
+	<div class="media">
+			<img src="https://png.pngtree.com/png-vector/20190804/ourlarge/pngtree-bag-worker-bag-user-interface-flat-color-icon-vector-png-image_1649444.jpg" width="200" height="200" class="mr-3" alt="...">
+			<br/><br/>
+			<div class="media-body row">
+					<br/>
+			  <h1 class="mt-0">{{trabajadorDetail.nombre}}-------------------------------------------------------------------</h1>
+			  <br/><br/><br/><br/><br/>
+			  	<div class="col-md-5">	
+				<h1><span class="badge badge-secondary">Correo:</span></h1>
+				<h5>{{trabajadorDetail.correo}}</h5>
+			</div>
+			<div class="col-md-5">	
+				<h1><span class="badge badge-secondary">Id:</span></h1>
+				<h5>{{trabajadorDetail.id}}</h5>
+			</div>
+			<div class="col-md-5">	
+				<h1><span class="badge badge-secondary">Telefono:</span></h1>
+				<h5>{{trabajadorDetail.telefono}}</h5>
+			</div>
+			<div class="col-md-5">	
+					<h1><span class="badge badge-secondary">Seguro:</span></h1>
+					<h5>{{trabajadorDetail.seguroSocial}}</h5>
+				</div>
+			</div>
+		  </div>
+  
   <p class="h3">
 		Servicios ofrecidos: 
 	</p>
