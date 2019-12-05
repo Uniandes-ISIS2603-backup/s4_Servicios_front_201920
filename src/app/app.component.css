@@ -3212,3 +3212,49 @@ div.blancogay {
      -webkit-animation-name: zoomOutUp;
      animation-name: zoomOutUp;
    }
+
+   div.at-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .at-item {
+    color: #3079ed;
+    animation-name: angry-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  }
+  @keyframes angry-animation {
+    0%{
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    19%{
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40%{
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    50%{
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    60%{
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+    80%{
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    100%{
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
